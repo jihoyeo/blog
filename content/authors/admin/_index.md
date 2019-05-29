@@ -14,7 +14,7 @@ education:
   - course: BSc in Urban Engineering
     institution: Hanyang University
     year: 2010
-email: ""
+email: "jiho@kaist.ac.kr"
 interests:
 - Transportation operation
 - Transportation planning
