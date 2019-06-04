@@ -16,7 +16,7 @@ weight = 70
 
 ## Journals
 
-- Shim, J., Yeo, J., Lee, S., Hamdar, S., and Jang, K. (Accpeted). Empirical Evaluation of Influential Factors on Bifurcation in Macroscopic Fundamental Diagram, Transportation Research Part C: Emerging Technologies, In press, SCI
+- Shim, J., Yeo, J., Lee, S., Hamdar, S. H., & Jang, K. (2019). Empirical evaluation of influential factors on bifurcation in macroscopic fundamental diagrams. Transportation Research Part C: Emerging Technologies, 102, 509-520.
 
 - Yeo, J., Park, S., & Jang, K. (2015). Effects of urban sprawl and vehicle miles traveled on traffic fatalities. Traffic injury prevention, Vol. 16, Issue 4, pp. 397-403
 
@@ -35,5 +35,5 @@ weight = 70
 
 - Yeo, J., Shim, G., Jang, K. (2016) Changing Patterns of Railway Trips: Using Time-series Passengers' Travel Data in Korea Railway. The 1st Asian Conference on Railway Infrastructure and Transportation, Jeju, Korea
 
-- Yeo, J., Lee, J. and Jang, K. (2018) Develop Safety Surrogate Measure for Evaluating Motor Carrier Companies and Drivers, Proceedings of Road Safety on Five Continents, Jeju Island, South Korea 
+
 
