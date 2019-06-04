@@ -1,8 +1,7 @@
 ---
 authors:
 - admin
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+bio: My research interests include transportation network, traffic prediction, human mobility and ride-sharing algorithm.
 education:
   courses:
   - course: PhD in Transportation Operation
@@ -16,9 +15,10 @@ education:
     year: 2010
 email: "jiho@kaist.ac.kr"
 interests:
-- Transportation operation
-- Transportation planning
-- Dynamic traffic control
+- Transportation Network
+- Traffic Prediction
+- Ride Sharing Algorithm
+- Human Mobility
 name: Jiho Yeo
 organizations:
 - name: KAIST Graduate school of Green Transportation
@@ -40,6 +40,6 @@ user_groups:
 - Visitors
 ---
 
-Jiho is Ph.D. Candidate at KAIST, Transportation Operation and Planning for Sustainability Lab. His research interests include transportation operation, planning, traffic safety and analysis of transportation big data. Recent research topic is dynamic ride-sharing with deep learning and optimization.
+Jiho is Ph.D. Candidate at KAIST, Transportation Operation and Planning for Sustainability Lab. His research interests include transportation network, traffic prediction, traffic safety and analysis of transportation big data and human mobility. Recent research topic is dynamic ride-sharing with deep learning and optimization.
 
 
