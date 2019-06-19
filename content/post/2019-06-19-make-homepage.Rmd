@@ -2,7 +2,7 @@
 title: "Make homepage"
 author: "Jiho Yeo"
 date: '2019-06-19'
-categories: etc
+categories: ["R"]
 featured: no
 image:
   caption: ''
