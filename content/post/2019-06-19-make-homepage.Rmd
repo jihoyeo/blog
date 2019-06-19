@@ -2,7 +2,9 @@
 title: "Make homepage"
 author: "Jiho Yeo"
 date: '2019-06-19'
-categories: ["R"]
+categories:
+  - ETC
+  - R
 featured: no
 image:
   caption: ''
@@ -13,7 +15,7 @@ projects: []
 slug: make-homepage
 subtitle: ''
 summary: ''
-tags: []
+tags: ["ETC"]
 authors: []
 ---
 
