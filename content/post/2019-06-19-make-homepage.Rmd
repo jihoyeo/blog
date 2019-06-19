@@ -1,0 +1,89 @@
+---
+title: "Make homepage"
+author: "Jiho Yeo"
+date: '2019-06-19'
+categories: etc
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+lastmod: '2019-06-19T12:06:01+09:00'
+projects: []
+slug: make-homepage
+subtitle: ''
+summary: ''
+tags: []
+authors: []
+---
+
+I'll introduce how to make homepage using R `blogdown` packages
+
+This tutorial is made for lab seminar of [TOPS](http://tops.kaist.ac.kr)
+
+Before get started, here is useful website when you are going to learn blogdown
+
+* [This](https://bookdown.org/yihui/blogdown/) is manual of blowdown packages
+
+* <https://youtu.be/zeYn0maX1nQ> and <https://youtu.be/E3W6UmaItQo> provide Youtube lecture (Korean) how to relate your homepage to github.
+
+* <https://lmyint.github.io/post/hugo-academic-tips/>: It explains academic format 
+
+* <https://sourcethemes.com/academic/docs/install/>: it is manual of academic format. You can choose another format what you want.
+
+First you should install `blogdown` packages by `install.packages("blowdown")`
+
+Then you should have github id. Log in at [github](https://github.com/), and make new repository for upload your marterial.
+
+
+
+
+## Clone git repository
+
+It's the first step. When you make repository. Clone it to your desktop.
+
+In R console, go to **file > New project > Version Control > Git**
+
+and put your git link to 'Repository URL'
+
+You can see that new folder is made in your working directory. 
+
+## Make new site
+
+Now you can make your hompage with just one command line
+`new_site()`
+
+It is very simple. You can select your own theme for your homepage.
+
+see <https://themes.gohugo.io/> and select one of them. 
+
+Then type `new_site(theme="calintat/minimal")`
+
+Put `serve_site()` then you can see your homepage poped up
+
+You can modify your website by changing files in your repository.
+
+## Modify your site
+
+1. Change *config.toml*. You can modify your title page.
+
+2. You can add new posts. Go **Addins > New post**
+
+## Upload your modification to git
+
+Your modification and new post are in our desktop. So we have to upload them to github
+
+1. First open '.gitignore' and type '\\public' because we don't want to upload 'public folder' to our git.
+
+2. Go **Git > Click Commit > Click Staged > Add commit message > Push** or you can type command at 'Terminal'. `git add .`, `git commit -m "message"`, `git push`
+
+3. Finally all of data is uploaded to your github, and we are going to make web pages at [here](http://www.netlify.com)
+
+4. Log in the site and make new website based on github. Deatailed is in [here](https://youtu.be/OG8PYuCUfOQ)
+
+
+
+
+# Thank you :) 
+
+
