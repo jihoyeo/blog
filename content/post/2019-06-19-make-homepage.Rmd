@@ -15,7 +15,9 @@ projects: []
 slug: make-homepage
 subtitle: ''
 summary: ''
-tags: ["ETC"]
+tags: 
+  - R blogdown
+  - etc
 authors: []
 ---
 
