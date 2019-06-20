@@ -80,7 +80,7 @@ You can modify your website by changing files in your repository.
 
 <br>
 
-## Upload your modification to git
+# Upload your modification to git
 
 Your modification and new post are in our desktop. So we have to upload them to github
 
