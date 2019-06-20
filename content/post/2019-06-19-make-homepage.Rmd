@@ -39,10 +39,11 @@ First you should install `blogdown` packages by `install.packages("blowdown")`
 
 Then you should have github id. Log in at [github](https://github.com/), and make new repository for upload your marterial.
 
+<br>
 
 
 
-## Clone git repository
+**## Clone git repository**
 
 It's the first step. When you make repository. Clone it to your desktop.
 
@@ -52,7 +53,9 @@ and put your git link to 'Repository URL'
 
 You can see that new folder is made in your working directory. 
 
-## Make new site
+<br>
+
+**## Make new site**
 
 Now you can make your hompage with just one command line
 `new_site()`
@@ -67,13 +70,15 @@ Put `serve_site()` then you can see your homepage poped up
 
 You can modify your website by changing files in your repository.
 
-## Modify your site
+<br>
+
+**## Modify your site**
 
 1. Change *config.toml*. You can modify your title page.
 
 2. You can add new posts. Go **Addins > New post**
 
-## Upload your modification to git
+**## Upload your modification to git**
 
 Your modification and new post are in our desktop. So we have to upload them to github
 
@@ -85,8 +90,7 @@ Your modification and new post are in our desktop. So we have to upload them to 
 
 4. Log in the site and make new website based on github. Deatailed is in [here](https://youtu.be/OG8PYuCUfOQ)
 
-
-
+<br>
 
 # Thank you :) 
 
