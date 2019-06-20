@@ -43,7 +43,7 @@ Then you should have github id. Log in at [github](https://github.com/), and mak
 
 
 
-**## Clone git repository**
+# Clone git repository
 
 It's the first step. When you make repository. Clone it to your desktop.
 
@@ -55,7 +55,7 @@ You can see that new folder is made in your working directory.
 
 <br>
 
-**## Make new site**
+# Make new site
 
 Now you can make your hompage with just one command line
 `new_site()`
@@ -72,7 +72,7 @@ You can modify your website by changing files in your repository.
 
 <br>
 
-**## Modify your site**
+# Modify your site
 
 1. Change *config.toml*. You can modify your title page.
 
