@@ -19,12 +19,11 @@ tags:
   - R blogdown
   - etc
 authors: []
+output: html_vignette
 ---
 
 I'll introduce how to make homepage using R `blogdown` packages
-
 This tutorial is made for lab seminar of [TOPS](http://tops.kaist.ac.kr)
-
 Before get started, here is useful website when you are going to learn blogdown
 
 * [This](https://bookdown.org/yihui/blogdown/) is manual of blowdown packages
@@ -36,14 +35,11 @@ Before get started, here is useful website when you are going to learn blogdown
 * <https://sourcethemes.com/academic/docs/install/>: it is manual of academic format. You can choose another format what you want.
 
 First you should install `blogdown` packages by `install.packages("blowdown")`
-
 Then you should have github id. Log in at [github](https://github.com/), and make new repository for upload your marterial.
 
 <br>
 
-
-
-# Clone git repository
+## **Clone git repository**
 
 It's the first step. When you make repository. Clone it to your desktop.
 
@@ -55,7 +51,7 @@ You can see that new folder is made in your working directory.
 
 <br>
 
-# Make new site
+## **Make new site**
 
 Now you can make your hompage with just one command line
 `new_site()`
@@ -72,7 +68,7 @@ You can modify your website by changing files in your repository.
 
 <br>
 
-# Modify your site
+## **Modify your site**
 
 1. Change *config.toml*. You can modify your title page.
 
@@ -80,13 +76,14 @@ You can modify your website by changing files in your repository.
 
 <br>
 
-# Upload your modification to git
+## **Upload your modification to git**
 
 Your modification and new post are in our desktop. So we have to upload them to github
 
 1. First open '.gitignore' and type '\\public' because we don't want to upload 'public folder' to our git.
 
-2. Go **Git > Click Commit > Click Staged > Add commit message > Push** or you can type command at 'Terminal'. `git add .`, `git commit -m "message"`, `git push`
+2. Go **Git > Click Commit > Click Staged > Add commit message > Push** or 
+you can type command at 'Terminal'. `git add .`, `git commit -m "message"`, `git push`
 
 3. Finally all of data is uploaded to your github, and we are going to make web pages at [here](http://www.netlify.com)
 
@@ -94,6 +91,77 @@ Your modification and new post are in our desktop. So we have to upload them to 
 
 <br>
 
-# Thank you :) 
+
+## **Understanding the structure of blog down: 2019-07-26**
+
+- This additional information is from [Esteban Moro's post](http://estebanmoro.org/post/2019-02-04-setting-up-your-blog-with-rstudio-and-blogdown-iii-modify-your-theme/#hugo-internals)
+
+- Here is the directory of my homepage. I created the blog in `~/blog`
+
+![](/img/makehomepage/basic_structure.png)
+
+- `static` folder is the root folder for the blog
+- All files can be assessed in this folder
+- Put images and files to be uploaded in the blog
+- `public` folder contains all html files and structure of the blog.
+- `theme` folder contains all the format of the theme. Do not modify it if you don't know about it.
+
+## **Create new posts**
+
+- `serve_site()` command start the Hugo server and browser 
+
+```{r eval=FALSE, include=TRUE}
+library(blogdown)
+serve_site()
+```
+
+- For creating a new post, go RStudio Addins >> New post
+- Then you can see like this 
+
+![](/img/makehomepage/new_post.png)
+
+- Categories are contents. The posts are sorted by the categories.
+- This post has 'ETC' and 'R' as categories.
+- Tags are rather small contents. It can be seen at the tail of the document.
+- To insert the youtube or tweet, use this following codein your text: {{< youtube 2WTWx0yknQQ >}}
+- Change '%' to '<' and '>'
+
+## **Modification of theme**
+
+- Go '~/blog/themes/hugo-academic/'
+- The folder `layouts` contains html files in HOGU format that specify how pages are be rendered
+- Instead of modifying the original template files in the `themes` folder it is better to replicate the layouts structure outside the themes folder.
+- Make new `layouts` folder like `~/blog/layouts`
+- 
+
+## **Math equation**
+
+- This is simple equation using Latex
+$\int_0^\infty f(x) dx$
+- But, at first, blogdown does not display equation in the browser.
+- Go `~/blog/themes/hugo-academic/layouts/partials/head_custom.html`  
+Then paste this code
+
+```{r eval=FALSE, include=TRUE}
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<script async type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+```
 
 
+at the top.
+
+
+## Modifying menus
+- I am using hugo-academic format. Basic parameters and menus can be modified at `~/blog/config/_default`
+- In `~/blog/content`, there are all html and markdown files that consist of my blog
+- In `~/blog/content/home/`, All menus can be modified. I added 'CV.md' and 'publications.md'.
+- 
