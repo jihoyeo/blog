@@ -11,7 +11,7 @@ title = "CV"
 subtitle = ""
 
 # Order that this section will appear in.
-weight = 80
+weight = 90
 
 [content]
 
@@ -19,4 +19,4 @@ weight = 80
   count = 1
 +++
 
-My CV is avilable in here
+My CV is avilable in [here](/file/cv.pdf)
