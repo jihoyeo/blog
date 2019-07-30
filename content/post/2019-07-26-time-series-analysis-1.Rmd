@@ -43,11 +43,14 @@ Time Series Analysis를 위한 Lecture를 이곳에 정리해보려고 한다.
 - 일반적으로 Gaussian white noise: 정규분포로 가정해서 많이 쓰인다.
 - iid (Identically Independently distributed) -> White noise 하지만 역은 성립하지 않음
 
-### Stationary
+### Stationary (Strong)
 - Stationary means that its distribution does not change stochastically
 - For $x_1,...,x_t$ their joint distribution does not change in the following sense.
 - **Strictly stationary** [Def 1.6 in the book]
-- $F_{t_1}$
+- $F_{t_1,t_2,...,t_n}(x_1,...,x_n) = F_{t_1+h,t_2+h,...,t_n+h}(x_1,...,x_n)$ where F is joint CDF of random variables
+- 하지만 위에 언급했듯이 2변수 이상의 joint distribution을 아는 것은 실질적으로 불가능함. 
+
+### Stationary (Week)
 
 ## **실습**
 
