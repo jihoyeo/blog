@@ -19,6 +19,69 @@ image:
 projects: []
 output: html_vignette
 ---
+Time Series Analysis를 위한 Lecture를 이곳에 정리해보려고 한다.  
+가능할 진 모르겠지만 앞으로 내가 하게 되는 모든 공부를 이곳에 정리를 하고 싶다.  
+한양대 이기천 교수님이 강의하신 수업을 기반으로 하고 있으며,  
+전체 강좌는 [이곳](http://www.kocw.net/home/search/kemView.do?kemId=977301)에서 볼 수 있다.  
+이 강좌는 Main textbook은 [Time Series Analysis and Its Applications With R Examples](https://www.stat.pitt.edu/stoffer/tsa4/)을 기반으로 하고 있으며, 실습을 위한 [R 코드](https://www.stat.pitt.edu/stoffer/tsda/)도 함께 제공된다.  
+
+오늘 포스팅은 해당 강좌의 1강의 내용을 다룬다 (https://youtu.be/hCl8zTYM4So)  
+{{% youtube hCl8zTYM4So %}}
+
+## **이론**
+### What is Time series
+- Time series is a realization of a sequence of random variables.  
+- Time series ~ a stochastic process of $X_1, X_2, X_3, ..., X_t$
+- 이처럼 t개의 random variables의 joint probability로 나타낼 수 있지만 실제로 이 분포를 아는 것은 불가능하다
+- 그렇기 때문에 문제를 간단하게 하기 위해 여러가지 가정 (Stationary)를 설정함
+
+### Random noise
+- White noise process $a_0, a_1, ...$ assume that it is uncorrelated: i.e. $Cov(a_t,a_s) = 0 \ for \ t \neq s$  
+- And $E[a_t] = 0$
+- $V[a_t]=\sigma^2_a$, which is constant.
+- Usually denoted by $a_t ~ WN(0,\sigma_a^2)$
+- 일반적으로 Gaussian white noise: 정규분포로 가정해서 많이 쓰인다.
+- iid (Identically Independently distributed) -> White noise 하지만 역은 성립하지 않음
+
+### Stationary
+- Stationary means that its distribution does not change stochastically
+- For $x_1,...,x_t$ their joint distribution does not change in the following sense.
+- **Strictly stationary** [Def 1.6 in the book]
 
 
-![](/img/tmp.png)
+## **실습**
+
+실습 코드는 [이곳](https://www.stat.pitt.edu/stoffer/tsa4/R_toot.htm) 에서 볼 수 있다
+
+- 패키지 설치 및 라이브러리 불러오기
+```{r eval=F, include=T}
+install.packages("astsa")
+```
+
+```{r}
+library(astsa)
+data() # use this command to view all the loaded data
+```
+
+- 
+
+```{r}
+par(mfrow=2:1)
+tsplot(jj, ylab="QEPS", type="o", col=4, main="Johnson & Johnson Quarterly Earnings")
+tsplot(log(jj), ylab="log(QEPS)", type="o", col=4)
+```
+
+
+
+
+## **Reference**
+
+참고할만한 Reference들이 정말 많다.  
+- [11 Classical Time Series Forecasting Methods in Python (Cheat Sheet)](https://machinelearningmastery.com/time-series-forecasting-methods-in-python-cheat-sheet/): 11가지 Time-series model의 간단한 설명과 python code를 제공
+
+- https://yjucho1.github.io/spatio-temporal%20data/time-series/time-series-part4/: 시계열 분석에 대한 이론에 대해 정리한 블로그
+
+
+
+
+
