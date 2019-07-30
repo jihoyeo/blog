@@ -47,7 +47,7 @@ Time Series Analysis를 위한 Lecture를 이곳에 정리해보려고 한다.
 - Stationary means that its distribution does not change stochastically
 - For $x_1,...,x_t$ their joint distribution does not change in the following sense.
 - **Strictly stationary** [Def 1.6 in the book]
-
+- $F_{t_1}$
 
 ## **실습**
 
