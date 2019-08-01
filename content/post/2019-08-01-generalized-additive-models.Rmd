@@ -133,7 +133,7 @@ lm1
 
 #Now plotting the Model
 
-plot.gam(lm1,se=T)
+plot(lm1,se=T)
 ```
 - `gam` function을 사용한 것과 동일한 결과가 출력된다.
 
