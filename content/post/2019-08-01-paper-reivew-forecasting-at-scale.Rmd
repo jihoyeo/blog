@@ -1,0 +1,299 @@
+---
+title: '[Paper reivew] Forecasting at Scale'
+author: Jiho Yeo
+date: '2019-08-01'
+slug: paper-reivew-forecasting-at-scale
+categories:
+  - Paper review
+  - Time series analysis
+  - Study
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2019-08-01T20:21:53+09:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+Prophet은 Facebook에서 개발한 Time-series prediction model이다. Deep learning이 핫한 이 시점에서 딥러닝을 사용하지 않은 모형이라는 점이 신기하다. 전통적인 ARIMA 계열의 시계열 모형과, 최근 널리 쓰이고 있는 LSTM, RNN과 같은 모형과 비교해 보았을 때 어떤 성능을 낼 수 있는지 잘 모르겠지만, 그래서 paper review 및 실습 코드를 활용해서 구현을 연습해 보고자 한다.
+
+실습은 추후에 다른 포스팅에서 진행하도록 하고 (논문 작성을 위해 고속도로 데이터를 가지고 해보고자 한다). 여기서는 Facebook이 발표한 논문인 ['Forecasting at Scale'](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1380080) 논문에 대한 리뷰를 작성하고자 한다. 논문 본 글 외에도 [모든이들을 위한 FACEBOOK PROPHET PAPER 쉬운 요약 정리]("https://gorakgarak.tistory.com/1255")를 많이 참조하였다.
+이외에도 [The Math of Prophet](https://medium.com/future-vision/the-math-of-prophet-46864fa9c55a)이란 좋은 포스트도 발견하였고 참조하였다.
+
+# **3. The Prophet Forecasting Model**
+
+먼저 Prophet은 decomposable time series model을 기반으로 한다. 
+trend, seasnonality, holidays의 세개의 핵심 component로 구성되어 있고 다음과 같이 표현된다.
+
+$y(t) = g(t)+s(t)+h(t)+\epsilon_t$
+
+$g(t)$는 주가성이 없는 트렌트의 변화를 $s(t)$는 weekly, yearly와 같은 주기적인 변화를, $h(t)$는 holiday와 같은 불규칙적인 스케줄을 나타낸다. $\epsilon_t$는 에러텀으로 정규분포를 따른다고 가정한다.
+
+이 모델은 Generalized Additive Model (GAM)과 비슷하다고 한다. GAM은 다른 포스트에 좀 더 상세히 설명되어 있다. 내가 이해하기론 regression인데 선형이 아닌 regression으로 이해하였다. 
+
+ARIMA에 비해 이 모델이 가지는 강점은 다음과 같이 정리할 수 있다
+- Flexibility
+- ARIMA모델과 다르게, 모델을 차분해서 정규화 시킬필요도 없고 missing value와 outliers를 따로 처리할 필요가 없다. 
+- Fitting이 매우 빠르다 
+- Model이 쉽게 이해 가능한 파라미터 들로 구성되어 있고, 분석자가 쉽게 바꿀 수 있다.
+
+## **3.1 The Trend Model**
+
+두가지 모델에 대해서 설명하고 있다  
+**1) Saturating growh model**   
+**2) Piecewise linear model**
+
+**Nonlinear, Saturating Growth**
+
+Facebook 사용자의 증가는 인구의 증가형태와 매우 유사한 패턴을 보임. 즉, non-linear하며 carrying capacity에서 Saturation함.
+다음과 같이 수식으로 표현될 수 있음.  
+$g(t)={C \over 1+exp(-k(t-m))}$  
+여기서 C는 carrying capacity이며 k는 growh rate이다.
+t가 무한대로 가면 C에 수렴하며 t가 마이너스 무한대로 가면 0으로 수렴하는 logistic한 form이다. 두가지 중요한 측면이 있다.  
+- Carrying capacity가 상수가 아니다. 즉 Fixed constant C를 time-varying capacity인 C(t)로 바꿔줘야 한다.
+- growth rate 역시 constant가 아니다. 
+
+따라서 growth rate가 변하는 change point를 설정해줘서 trend change를 반영해줄 필요가 있다. 
+- Suppose there are S change points at times $s_j$, $j=1,...,S$.
+- We define a vector of rate adjustments $\delta \in \mathbb{R}^S $ where $\delta_j$ is the change in rate that occurs at tims $s_j$.
+- The growth rate at time t: $k+\sum_{j:t>s_j}\delta_j$
+- Finally piecewise logistic growth model is: 
+![](/img/prophet/growth_model.png)
+
+한가지 중요한 다른 파라미터는 $C(t)$, time-varying capacity이다. 이 변수를 설정하는데는 분석자의 직관이 중요하다고 하는데, 구체적인 언급은 없다. 일단 핵심은, trend를 구할 때 changepoint를 설정하여 changepoint마다 growth rate와 capacity를 다르게 설정한다는 이야기 같다. 
+
+-----
+
+**Linear trend with changepoints **
+
+Saturating growth를 가지지 않을 때는 trend를 아래와 같은 모델로 반영할 수 있다
+
+$g(t) = (k+a(t)^T\delta)t+(m+a(t)^T\gamma)$
+
+where k is the growth rate, $\delta$ has the rate adjustments, m is the offset parameter, and $\gamma_j$ is set to $-s_j\delta_j$ to make the function continuous.  
+수학적 수식을 정확하게는 모르겠지만 뒤에 $\gamma$와 함께나오는 식은 수식은 연속으로 만들어주기 위해 취해주는 것 같다. 이 수식은 증가나 감소에 제약이 없는 linear growth model임. 위에 있는건 logistic growth model.
+
+-----
+
+**Automatic Changepoint Selection**
+
+지금까지 change point별로 모델의 parameter가 달라지는 piecewise growth model을 살펴보았다.
+그렇다면 이 change point의 갯수(S)와 위치, 그리고 크기($\delta_j$)를 정하는 것이 문제가 될 것이다.  
+먼저 change points는 자동으로 선택된다.
+
+> Automatic selection can be done quite naturally with the formulation in either model by putting a sparse prior on $\delta$.
+
+이 논문에서는 $\delta_j~Laplace(0,\tau)$를 따른다고 하였다.
+라플라스 분포에 대한 설명은 https://en.wikipedia.org/wiki/Laplace_distribution 이곳을 참고하자
+Laplace(0,1)의 모양은 아래 그림에서 빨간선과 같다.
+![](/img/prophet/laplace.png)
+
+즉 $\tau$가 0으로 가면, not-piecewise인 logistic or linear growth model이된다.
+
+> $\tau$ goes to 0 the fit reduces to standard (not-piecewise) logistic or linear growth.
+
+-----
+
+**Trend Forecast Uncertainty**
+When the model is extrapolated past the history to make a forecast, 
+the trend g(t) will have a constant rate.
+the uncertainty in the forecast trend is estimated by extending the generative model forward.
+
+- $S$ change points
+- over a history of $T$ points
+- each of which has a rate change $\delta_j \sim Laplace(0,\tau)$
+
+Simulation of future rate changes (that emulate those of the past) is achieved by replacing $\tau$ with a variance inferred from data.
+
+> In a fully Bayesian framework this could be done with a hierarchical prior on $\tau$ to obtain its posterior, otherwise we can use the maximum likelihood estimate of the rate scale parameter:
+
+$\lambda = {1 \over S} \sum_{j=1}^S|\delta_j|$
+
+> Future changepoints are randomly sampled in such a way that the average frequency of changepoints matches that in the history:
+
+$$
+\begin {equation}
+\forall j >T,\begin{cases}
+\delta_j = 0 \quad w.p.\ {T-S \over T} \\
+\delta_j \sim Laplace(0,\tau) \quad w.p.\ {S \over T}
+\end{cases}
+\end{equation}
+$$ 
+
+그러니까 미래에 change point를 과거 이력을 기반으로 확률적으로 도출한다는 의미.
+$\lambda$는 maximum likelihood estimate 같은걸로 과거데이터 기반으로 도출하는 것 같음
+
+> Thus, uncertainty in the forecast trend is measured by assuming the future will see the same average frequency and magnitude of rate changes that were seen in the history. Once $\lambda$ has been inferred from the data, this generative model is deployed to “simulate possible future trends and use the simulated trends to compute uncertainty intervals.”
+
+> As $\tau$ is increased the model has more flexibility in fitting the history and so training error will drop. However, when projected forward this flexibility will produce wide uncertainty intervals.
+
+-----
+
+## **3.2 Seasonality**
+
+Time series는 일반적으로 Multi-period seasonality가 있다.
+5-day 근무는 weekly한 패턴을 만들며, vacation이나 school break는 yearly한 패턴을 만든다. 
+본 연구는 Fourier series를 periodic effect를 구하는데 사용한다.
+
+- Let P be the regular period we expect the time series to have (e.g., P = 365.25 for yearly data or P = 7 for weekly data)
+- We can approximate arbitrary smooth seasonal effects with  
+
+$s(t)=\sum_{n=1}^N(a_n cos({2\pi nt \over P})+b_n sin({2\pi nt \over P}))$
+
+- Fitting seasonality requires estimating the 2N parameters $\beta = [a_1, b_1,..., a_N, b_N]$ 
+
+여기서 N은 우리가 결정해줘야 하는 값인데, N이 크면 패턴이 빨리 바뀌게 되며 N이 작으면 패턴이 느리게 변한다.
+(아래 그림 참조)  
+![](/img/prophet/seasonality.png)
+N이 클 경우 더 flexible 하지만 over-fitting의 우려가 있다.
+이 논문에서는 Weekly seasonality는 N을 3으로, 
+연단위라면 N을 10으로 하는 것을 추천한다.
+
+> For yearly and weekly seasonality, we have found N = 10 and of these parameters could be automated using a model selection procedure such as AIC.
+
+## **3.3 Holidays and Events**
+
+> Holidays and events provide large, somewhat predictable shocks to many business time series and often do not follow a periodic pattern
+
+> Incorporatingthislistofholidaysintothe modelismade straightforward by assuming that the effects ofholidays are independent.
+
+For each holiday $i$, let $D_i$ be the set of past and future dates for that holiday.  
+We add an indicator function representing whther time $t$ is during holiday $i$, 
+and assign each holiday a parameter $\kappa_i$ which is the corresponding change in the forecast.  
+This is done in a similar way as seasnonality by generating a matrix of regressors  
+
+$Z(t) = [I(t \in D_1),...,I(t \in D_L)]$
+
+and taking 
+
+$h(t) = Z(t)\kappa$
+
+As with seasonality, we use a prior $\kappa \sim Normal(0,\nu^2)$
+
+It is often important to include effects for a window of days around a particular holiday, such as the weekend ofThanksgiving. 
+To account for that we include additional parameters for the days surrounding the holiday, 
+essentially treating each of the days in the window around the holiday as a holiday itself.
+
+## **3.4 Model Fitting**
+
+When the seasonality and holiday features for each observation are combined into a **matrix X**
+and **the changepoint indicators $a(t)$ in a matrix A**, the entire model of $y(t) = g(t)+s(t)+h(t)+\epsilon_t$ can be expressed in a few lines of Stan code. We use Stan’s L-BFGS to find a maximum a posteriori estimate
+
+a maximum a posteriori estimate은 [이 포스팅](http://sanghyukchun.github.io/58/)에 대한 설명을 참고하자.
+
+모델을 위한 Stan code는 아래와 같다. 
+
+**Priors**
+
+$k \sim normal (0,5)$ : 
+$m \sim normal (0,5)$ :
+$\epsilon \sim normal(0,0.5)$ : error term  
+$\delta \sim \text{Laplace} (0,\tau)$:  
+$\beta \sim normal (0, \sigma)$
+
+$k$ is base growth rate for trend model  
+$m$ is an offset parameter for trend model  
+$\deltal$ is Magnitude of change of growth rate at changepoints  
+$\tau$ is flexibility of changing rate  
+$\beta$ is parameters for determining seasonality
+$\sigma$ is flexibility of seasonality
+
+**Logistic Likelihood**
+
+$y \sim normal({C \over 1+exp(-(k + A*\delta)(t-(m+A*\gamma)))} + X * \beta, \epsilon)$
+
+** Linear Likelihood
+
+$y \sim normal({(k + A*\delta)(t+(m+A*\gamma))} + X * \beta, \sigma)$
+
+
+Holiday가 없다고 생각할 수 있는데 holiday는 $\beta*X$ 함께 포함되어 계산되는 것 같음
+
+> The parameters $\tua$ and $\sigma$ in above equation are controls
+for the amount ofregularization on the model changepoints and seasonality, respectively. Regularization is important for both of these to avoid overfitting, however there likely is not enough historical data to select the best regularization parameters via cross-validation.We set default values that are appropriate for most forecasting problems, and when these parameters need to be optimized it happens with the analyst in the loop.
+
+$\tau$와 $\sigma$를 정하는 것이 overfitting을 피하기 위해서 중요한데 historical로 적합한 regularizaion parameter를 찾기가 힘들수도 있다고 함. 이것을 조정하기 위해서는 analyst-in-the-loop를 하라고 하는데 계속 값 바꿔서 for loop를 돌리라는 의미로 해석하였다.
+
+## **3.5 Analyst-in-the-Loop Modeling**
+
+4가지에 대해서 analyst들이 control 할 수 있다고 이야기하고 있다. 즉 이 변수들을 우리가 설정해줘야 한단 말이겠지.
+
+- Capacities: Analysts may have external data for the total market size and can apply that knowledge directly by specifying capacities.
+- Chagepoints: Known dates of changepoints, such as dates of product changes, can be directly specified.
+- Holidays and Seasonality: Analysts that we work with have expe- rience with which holidays impact growth in which regions, and they can directly input the relevant holiday dates and the applicable time scales of seasonality
+- Smoothing parameters: By adjusting  $\tau$ an analyst can select from within a range ofmore global or locally smooth models. The seasonality and holiday smoothing parameters $(\sigma, \nu)$ allow the analyst to tell the model how much of the historical sea sonalvariation is expectedinthe future.
+
+$\tau$, $\sigma$, $\nu)$ 모두 prior 값들의 분산인 것을 알 수 있다.  
+$\tau$는 위에서 언급하였듯이 changing rate (trend)의 flexibility를 결정한다.  
+$\sigma$는 seasonality에서 fourier series의 계수의 분포 중 분산을 의미한다 (i.e. $\beta \sim normal (0, \sigma)$)  
+$\nu$는 각 holiday의 effect를 결정하는 $h(t) = Z(t)\kappa$에서 $\kappa$의 분산을 의미한다 (i.e. $\kappa \sim Normal(0,\nu^2)$)
+
+많은 human intervention이 개입될 여지가 있다.
+
+1) linear trend or logistic growth  
+2) Identifying time scales of seasonality
+3) Identifying outlying time periods that should be removed from fitting
+
+해당 부분을 결정하는데 있어서는 **Insight and Domain knowledge**가 매우 중요하다. 이처럼 본 논문은 statistical model의 power만큼이나 분석자의 직관이나 domain knowledge가 중요하다는 것을 강조한다. 고속도로에서의 통행 수요의 경우에도 복잡한 예측 모형보다는 경험을 기반으로 한 모형이 더 정확하며, 네비게이션의 통행 시간을 산정해주는 알고리즘 역시 여러번의 수동적인 수정을 통해 현재와 같이 고도화 되었다고 들었다.
+
+> Theforecasting literature oftenmakes thedistinction between statistical forecasts, which are based on models fit to historical data, and judgmental forecasts (also called manage- rial forecasts), which human experts produce using whatever process they have learned tends to work well for a specific time series. Each of these approaches has their advantages.
+
+Our analyst-in-the-loop modeling approach is an alternative approach that attempts to blend the advantages ofstatistical and judgmental forecasts by focusing analyst effort on improving the model when necessary rather than directly producing forecasts through some unstated procedure.
+
+하지만 이렇게 분석자의 domain knowledge를 통해 모델이 지속적으로 개선되기 위해서는 automatic evaluation of forecast quality와 good visualization tools가 매우 중요하다고 이야기 한다. 다음 챕터에 이 부분에 대한 설명이 있다. 
+
+# **4. Automating Evaluation of Forecasts**
+
+## **4.1 Use of Baseline Forecasts**
+
+When evaluating any forecasting procedure it is important to compare to a set of baseline methods. We prefer using simplistic forecasts that make strong assumptions about the underlying process but that can produce a reasonable forecast in practice.
+
+## **4.2 Modeling Forecast Accuracy**
+
+Forecasts are made over a certain horizon, which we denote $H$. The horizon is the number of days in the future we care about forecasting.
+We need to declare a forecast- ing objective to compare methods and track performance.
+
+Additionally, understanding how error-prone our forecasting procedure is can allow consumers of the forecasts in a business setting to determine whether to trust it at all.
+
+Let $\hat{y}(t|T)$ represent a forecast for time t made with historical information up to time T  
+$d(y,y^\prime)$ be a distance metric such as mean absolute error, $d(y,y^\prime) = |y-y^\prime|$
+We prefer mean absolute percentage error (MAPE) for its interpretability  
+Define the empirical accuracy of a forecast of $h \in (0,H]$ periods ahead of time T as  
+$\phi(T,h) = d(\hat{y}(T+h|T),y(T+h))$ 
+
+뭐 이렇게 복잡하게 써놓았는가 싶지만, 그냥 T시간까지의 데이터로 만든 예측 모형으로 T이후의 T+h 시점까지의 error를 구하기 위한 수식인 것 같다. 여기서 함수 d는 단순하게 absolute mean일수도 있고 아니면 MAPE같은 값일 수도 있지만 해석의 용이성 때문에 MAPE를 선호한다고 한다. 
+
+The approach is similar to applying cross-validation to estimate out of-sample error for models making predictions on iid data. 
+Given a set of historical forecasts, we fit a model of the expected error we would make at different forecast horizons h:
+
+$\xi(h) = E[\phi(T,h)]$
+
+This model should be flexible but can impose some simple assumptions.  
+*Assumption 1:* the function should be locally smooth in h  
+*Assumption 2:* the function should be weakly increasing in h
+
+In practice, we use a local regression (Cleveland and Devlin 1988) or isotonicregres- sion (Dykstra 1981) as flexible nonparametric models of error curves.
+
+결국 h (forecast horizon)을 변화시키면서 $E[\phi(T,h)]$를 통해 h에서의 error의 expectation을 구한다는 것 같다. 그리고 이 함수는 h에 대해서 locally smooth하며, h가 증가함에 따라 증가하는 형태라고 가정을 한다. 일반적으로 discrete하게 h가 얼마일 때 에러가 얼마인지를 끊어지는 식으로 보여주는 걸 생각하였었는데, 좀 더 h에 대해서 continuous하게 error plot이 그려지는 걸 상상하면 될 것 같다. 아래 그림을 참고하자. 이 모델을 이용해서 어떻게 구체적으로 error를 구하는지는 다음 section에 설명되어 있다.
+
+![](/img/prophet/error.png)
+
+## **4.3 Simulated Historical Forecasts**
+
+Unfortunately, it is difficult to use a method like cross-validation because the observations are not exchangeable—we cannot simply randomly partition the data.
+
+교차검증을 하기가 어려운데 그 이유가 observation들이 exchangeable하지 않아서라고 한다. 내가 생각하기로 이것은 데이터가 시계열 자료이기 때문에 미래의 데이터를 가지고 과거를 테스트할 수가 없다는 의미로 해석된다. cross-validation에 대한 자세한 설명은 [이곳](https://3months.tistory.com/321)을 참고하자. 데이터를 일정 partition으로 나누어, test set을 계속 변화시켜서 모델을 학습하고 테스트 하는 검증 방법을 말한다. https://towardsdatascience.com/time-series-nested-cross-validation-76adba623eb9, 이 링크도 참조하면 좋을 것 같다. Hypter parameter를 setting하기 위해 training set을 다시 training subset과 validation set으로 나누며, 최종적으로 선택된 hyper-parameter를 가지고 test set으로 정확도를 계산한다.
+
+> We use **simulated historical forecasts (SHFs)** by producing K forecasts at various cutoff points in the history, chosen such that the horizons lie within the history and the total error can be evaluated.
+
+This procedure is based on classical “rolling origin” forecast evaluation procedures (Tashman 2000), but uses only a small sequence of cutoff dates rather than making one forecast per historical date. 
+
+
+
+
