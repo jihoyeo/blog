@@ -99,16 +99,16 @@ plot(logitgam1,se=T)
 
 ## **Check if we need non-linear terms for year using ANOVA test**
 
-- Year 변수가 Linear한 form을 가지는 모델을 아래와 같이 구축해보자 
+Year 변수가 Linear한 form을 가지는 모델을 아래와 같이 구축해보자 
 
 ```{r}
 #fitting the Additive Regression Model which is linear in Year
 logitgam2<-gam(I(wage >250) ~ s(age,df=4)+ year + education , data =Wage, family = binomial)
 plot(logitgam2)
 ```
-- Year변수와 Logit과의 관계가 linear한 것을 볼 수 있다.
-- `anova()` function을 이용해서 어떤 모델의 설명력이 더 높은지 비교할 수 있다
-- anova의 자세한 설명은 [이곳](https://bookdown.org/ndphillips/YaRrr/comparing-regression-models-with-anova.html)을 참고하자
+Year변수와 Logit과의 관계가 linear한 것을 볼 수 있다.  
+`anova()` function을 이용해서 어떤 모델의 설명력이 더 높은지 비교할 수 있다.  
+anova의 자세한 설명은 [이곳](https://bookdown.org/ndphillips/YaRrr/comparing-regression-models-with-anova.html)을 참고하자
 
 ```{r}
 #anova() function to test the goodness of fit and choose the best Model
@@ -116,13 +116,13 @@ plot(logitgam2)
 
 anova(logitgam1,logitgam2,test = "Chisq")
 ```
-- 먼저 DF를 보면 -3인 것을 알 수 있는데 이것은 Model1이 model2에 비해서 degree of freedon이 더 작고 따라서 Model2가 더 간단한 모형이라는 것을 나타낸다.
-- 하지만 Model1과 Model2의 residual이 그렇게 큰 차이를 보이지 않는 것을 알 수 있고 따라서 두 모델의 성능차이가 없다는 영가설을 기각할 수 없다. 즉, 모델이 더 간단한 모델2가 더 적합하다고 해석할 수 있다.
-- 즉 year의 경우 linear한 텀을 갖는 것이 더 적합하다고 할 수 있다. 
+먼저 DF를 보면 -3인 것을 알 수 있는데 이것은 Model1이 model2에 비해서 degree of freedon이 더 작고 따라서 Model2가 더 간단한 모형이라는 것을 나타낸다.  
+하지만 Model1과 Model2의 residual이 그렇게 큰 차이를 보이지 않는 것을 알 수 있고 따라서 두 모델의 성능차이가 없다는 영가설을 기각할 수 없다. 즉, 모델이 더 간단한 모델2가 더 적합하다고 해석할 수 있다.  
+즉 year의 경우 linear한 텀을 갖는 것이 더 적합하다고 할 수 있다.  
 
-## Another way of fitting a gam
+## **Another way of fitting a gam**
 
-- `lm()` function을 이용해서도 Generalized Additive Model을 구축할 수 있다
+`lm()` function을 이용해서도 Generalized Additive Model을 구축할 수 있다  
 - `ns()` represents natural splines
 - `bs()`  represents cubic splines
 
@@ -135,7 +135,8 @@ lm1
 
 plot(lm1,se=T)
 ```
-- `gam` function을 사용한 것과 동일한 결과가 출력된다.
+
+`gam` function을 사용한 것과 동일한 결과가 출력된다.
 
 
 조금 더 체계적으로 공부하고 기록하기 위해 이 포스팅을 시작하였고, 마구잡이로 기록하고 싶은 것을 기록하고 있다. 창작보다는 모방이라 할 수있지만 현재로썬 어쩔 수 없다. 아무것도 모르는 상태에서 한발자국씩 조금은 더 나아가고 있다고 생각해보자. 무공을 연마하는 수련생과 같은 마음으로 하나씩 하나씩 내공을 쌓을 필요가 있다.
