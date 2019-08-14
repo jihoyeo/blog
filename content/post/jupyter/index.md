@@ -16,67 +16,34 @@ tags: []
 title: Display Jupyter Notebooks with Academic
 ---
 
+Jupyter notebook을 blogdown을 통해 post로 등록하는 방법에 대해 기록해두고자 한다.
 
-```python
-from IPython.core.display import Image
-Image('https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png')
-```
+[이곳](https://www.timlrx.com/2018/03/25/uploading-jupyter-notebook-files-to-blogdown/)의 링크를 기반으로 작성하였다.
 
-
-
-
-![png](./academic_0_0.png)
-
-
-
-
-```python
-print("Welcome to Academic!")
-```
-
-    Welcome to Academic!
-
-
-## Install Python and Jupyter
-
-[Install Anaconda](https://www.anaconda.com/distribution/#download-section) which includes Python 3 and Jupyter notebook.
-
-Otherwise, for advanced users, install Jupyter notebook with `pip3 install jupyter`.
-
-## Create a new blog post [as usual](https://sourcethemes.com/academic/docs/managing-content/#create-a-blog-post)
-
-Run the following commands in your Terminal, substituting `<MY_WEBSITE_FOLDER>` and `my-post` with the file path to your Academic website folder and a name for your blog post (without spaces), respectively:  
-
-```bash
-cd <MY_WEBSITE_FOLDER>
-hugo new  --kind post post/my-post
-cd <MY_WEBSITE_FOLDER>/content/post/my-post/
-```
-
-## Create or upload a Jupyter notebook
-
-Run the following command to start Jupyter within your new blog post folder. Then create a new Jupyter notebook (*New > Python Notebook*) or upload a notebook.
-
-```bash
-jupyter notebook
-```
 
 ## Convert notebook to Markdown
 
+Go directory where the ipynb file is located. For example
+
 ```bash
-jupyter nbconvert Untitled.ipynb --to markdown --NbConvertApp.output_files_dir=.
-
-# Copy the contents of Untitled.md and append it to index.md:
-cat Untitled.md | tee -a index.md
-
-# Remove the temporary file:
-rm Untitled.md
+cd C:/Users/User/jupyter/
 ```
+
+Convert ipynb to markdown
+
+```bash
+jupyter nbconvert --to markdown scipy.ipynb
+```
+This generates a .md file as well as a folder containing all the images from that file.  
+In my case the folder was named scipy.
+
+Then, copy the image files to the static folder where the website is located. I placed my files in the static/img/post_name folder.
+
 
 ## Edit your post metadata
 
-Open `index.md` in your text editor and edit the title etc. in the [front matter](https://sourcethemes.com/academic/docs/front-matter/) according to your preference.
+1. Add new post with R Markdown. Set post name, category, tag. 
 
-To set a [featured image](https://sourcethemes.com/academic/docs/managing-content/#featured-image), place an image named `featured` into your post's folder.
+2. Copy the markdown file over, and replace all the image directory paths to point to the newly created one in the static folder.
 
-For other tips, such as using math, see the guide on [writing content with Academic](https://sourcethemes.com/academic/docs/writing-markdown-latex/). 
+
