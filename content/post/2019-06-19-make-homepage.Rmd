@@ -164,4 +164,20 @@ at the top.
 - I am using hugo-academic format. Basic parameters and menus can be modified at `~/blog/config/_default`
 - In `~/blog/content`, there are all html and markdown files that consist of my blog
 - In `~/blog/content/home/`, All menus can be modified. I added 'CV.md' and 'publications.md'.
-- 
+
+
+ 
+| 종류 | 이름 | 확률분포 |
+|-|-|-|
+| 이산 | `bernoulli` | 베르누이분포 |
+| 이산 | `binom` |  이항분포 |
+| 이산 | `multinomial` |  다항분포 |
+| 연속 | `uniform` | 균일분포 |
+| 연속 | `norm` | 정규분포 |
+| 연속 | `beta` | 베타분포 |
+| 연속 | `gamma` | 감마분포 |
+| 연속 | `t` | 스튜던트 t분포 |
+| 연속 | `chi2` | 카이 제곱분포 |
+| 연속 | `f` | F분포 |
+| 연속 | `dirichlet` | 디리클리분포 |
+| 연속 | `multivariate_normal` | 다변수 정규분포 |
