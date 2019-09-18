@@ -70,6 +70,8 @@ import scipy.stats
 rv = sp.stats.norm()
 ```
 
+-----
+
 ### 모수 지정
 
 확률분포 객체를 생성할 때는 분포의 형상을 구체적으로 지정하는 **모수(parameter)**를 인수로 지정해야 한다. 각 확률분포마다 지정해야 할 모수 종류가 다르므로 자세한 설명은 사이파이 문서를 참조하여야 한다. 하지만 대부분 다음과 같은 모수들을 공통적으로 가진다.
@@ -85,6 +87,7 @@ rv = sp.stats.norm()
 ```python
 rv = sp.stats.norm(loc=1, scale=2)
 ```
+-----
 
 ### 확률분포 메서드
 
@@ -104,6 +107,8 @@ rv = sp.stats.norm(loc=1, scale=2)
 
 메서드 사용법은 다음과 같다.
 
+-----
+
 ### 확률밀도함수
 
 
@@ -118,7 +123,7 @@ plt.show()
 ```
 
 
-![png](/img/scipy_files/scipy_13_0.png)
+![](/img/scipy_files/scipy_13_0.png)
 
 
 #### 연습 문제 8.1.1
@@ -126,6 +131,8 @@ plt.show()
 (1) 기댓값이 0이고 표준 편차가 0.1인 정규분포의 객체를 만들고 확률밀도함수를 그려라. 
 
 (2) 이 확률밀도함수의 최대값은 얼마인가?
+
+-----
 
 ### 누적분포함수
 
@@ -141,8 +148,9 @@ plt.show()
 ```
 
 
-![png](/img/scipy_files/scipy_16_0.png)
+![](/img/scipy_files/scipy_16_0.png)
 
+-----
 
 ### 무작위 표본 생성
 
@@ -178,7 +186,7 @@ plt.show()
 ```
 
 
-![png](/img/scipy_files/scipy_20_0.png)
+![](/img/scipy_files/scipy_20_0.png)
 
 
 #### 연습 문제 8.1.2
@@ -187,6 +195,8 @@ plt.show()
 
 1. $N$=10인 경우
 2. $N$=10000인 경우
+
+-----
 
 ### 새로운 확률변수의 시뮬레이션
 
@@ -227,7 +237,7 @@ plt.show()
 ```
 
 
-![png](/img/scipy_files/scipy_24_0.png)
+![](/img/scipy_files/scipy_24_0.png)
 
 
 #### 연습 문제 8.1.3
