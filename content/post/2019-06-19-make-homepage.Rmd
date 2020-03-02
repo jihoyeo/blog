@@ -64,7 +64,7 @@ Then type `new_site(theme="calintat/minimal")`
 
 Put `serve_site()` then you can see your homepage poped up
 
-You can modify your website by changing files in your repository.
+You can modify your website by changing files in your repository.!
 
 <br>
 
