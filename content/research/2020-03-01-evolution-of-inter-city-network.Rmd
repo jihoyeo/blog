@@ -33,7 +33,7 @@ projects: []
 
 
 
-[Dashboard2](/html/Inter-city_travel_network.html)
+[Dashboard](/html/Inter-city_travel_network.html)
 
 
 
