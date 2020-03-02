@@ -1,0 +1,123 @@
+---
+title: Verification of power-law with poweRlaw package
+author: Jiho Yeo
+date: '2019-08-09'
+slug: verification-of-power-law-with-powerlaw-package
+categories:
+  - R
+  - Network sience
+  - Statistics
+  - Study
+tags:
+  - scale-free
+  - network science
+  - power-law
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2019-08-09T19:01:45+09:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+
+<p>이 포스팅에서는 R의 <code>poweRlaw</code> package를 이용해서 어떻게 power-law coefficient를 도출하고, statistical significance를 도출하는지를 살펴보고자 한다.</p>
+<p>이론적 고찰을 위해<br />
+<a href="https://arxiv.org/abs/1407.3492">Fitting heavy tailed distributions: the poweRlaw package</a>
+<a href="https://epubs.siam.org/doi/abs/10.1137/070710111">Power-Law Distributions in Empirical Data</a><br />
+를 참고하였고 poweRlaw package의 Examples를 <a href="https://cran.r-project.org/web/packages/poweRlaw/vignettes/b_powerlaw_examples.pdf">이곳</a>에서 참고하였다.</p>
+<div id="section" class="section level2">
+<h2>**</h2>
+</div>
+<div id="section-1" class="section level2">
+<h2><strong>실습</strong></h2>
+<p>이곳에 있는 코드의 대부분은 <a href="https://cran.r-project.org/web/packages/poweRlaw/vignettes/b_powerlaw_examples.pdf">이곳</a>에서 참고하였다.</p>
+<div id="discrete-data-the-moby-dick-data-set" class="section level3">
+<h3>1. Discrete data: The Moby Dick data set</h3>
+<p>The Moby Dick data set contains the frequency of unique words in the novel Moby Dick by Herman Melville.
+This data set can be downloaded from <a href="http://tuvalu.santafe.edu/∼aaronc/powerlaws/data.htm" class="uri">http://tuvalu.santafe.edu/∼aaronc/powerlaws/data.htm</a>
+or loaded directly</p>
+<pre class="r"><code>library(&quot;poweRlaw&quot;)</code></pre>
+<pre><code>## Warning: 패키지 &#39;poweRlaw&#39;는 R 버전 3.5.2에서 작성되었습니다</code></pre>
+<pre class="r"><code>data(&quot;moby&quot;, package=&quot;poweRlaw&quot;)</code></pre>
+<p>To fit a discrete power law to this data, we use the displ constructor</p>
+<pre class="r"><code>m_pl &lt;- displ$new(moby)</code></pre>
+<p>We estimate the lower threshold via</p>
+<pre class="r"><code>est &lt;- estimate_xmin(m_pl)</code></pre>
+<p>and update the power law object</p>
+<pre class="r"><code>m_pl$setXmin(est)</code></pre>
+<p>For a given value xmin, the scaling parameter is estimated by numerically optimising the loglikelihood.
+The optimiser is initialised using the analytical MLE</p>
+<p><span class="math inline">\(\hat{\alpha} = 1 + n[\sum_{i=1}^n log({x_i\over x_{min}-0.5})]^{-1}\)</span></p>
+<pre class="r"><code>est</code></pre>
+<pre><code>## $gof
+## [1] 0.008252634
+## 
+## $xmin
+## [1] 7
+## 
+## $pars
+## [1] 1.952728
+## 
+## $ntail
+## [1] 2958
+## 
+## $distance
+## [1] &quot;ks&quot;
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;estimate_xmin&quot;</code></pre>
+<p>This yields a threshold estimate of <span class="math inline">\(x_min\)</span> = 7 and scaling parameter <span class="math inline">\(\alpha\)</span>= 1.95</p>
+<p>Alternatively, we could perform a parameter scan for each value of <span class="math inline">\(x_min\)</span></p>
+<pre class="r"><code>estimate_xmin(m_pl, pars=seq(1.8, 2.3, 0.1))</code></pre>
+<pre><code>## $gof
+## [1] 0.01650067
+## 
+## $xmin
+## [1] 8
+## 
+## $pars
+## [1] 2
+## 
+## $ntail
+## [1] 2597
+## 
+## $distance
+## [1] &quot;ks&quot;
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;estimate_xmin&quot;</code></pre>
+<p>To fit a discrete log-normal distribution, we follow a similar procedure, except we begin by creating a dislnorm object</p>
+<pre class="r"><code>m_ln = dislnorm$new(moby)
+est = estimate_xmin(m_ln)
+est</code></pre>
+<pre><code>## $gof
+## [1] 0.01032094
+## 
+## $xmin
+## [1] 3
+## 
+## $pars
+## [1] -17.937673   4.869764
+## 
+## $ntail
+## [1] 6609
+## 
+## $distance
+## [1] &quot;ks&quot;
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;estimate_xmin&quot;</code></pre>
+<p>which yields a lower threshold of xmin = 3 and parameters (−17.9, 4.87)<br />
+the log-normal and power law distribution both provide reasonable fits to the data.</p>
+<p><strong>Parameter uncertainty</strong></p>
+<p>To get a handle on the uncertainty in the parameter estimates, we use a bootstrapping procedure, via the bootstrap function.</p>
+<pre class="r"><code>## 5000 bootstraps using two cores
+bs = bootstrap(m_pl, no_of_sims=5000, threads=2)</code></pre>
+</div>
+</div>
