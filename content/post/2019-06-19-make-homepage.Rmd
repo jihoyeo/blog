@@ -70,7 +70,7 @@ You can modify your website by changing files in your repository.
 
 ## **Modify your site**
 
-1. Change *config.toml*. You can modify your title page.
+1. Change *config.toml*. You can modify your title page
 
 2. You can add new posts. Go **Addins > New post**
 
