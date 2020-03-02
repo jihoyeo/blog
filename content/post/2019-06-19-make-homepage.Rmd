@@ -78,7 +78,7 @@ You can modify your website by changing files in your repository.
 
 ## **Upload your modification to git**
 
-Your modification and new post are in our desktop. So we have to upload them to github.
+Your modification and new post are in our desktop. So we have to upload them to github
 
 1. First open '.gitignore' and type '\\public' because we don't want to upload 'public folder' to our git.
 
