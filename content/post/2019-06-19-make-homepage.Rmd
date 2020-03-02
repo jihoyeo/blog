@@ -47,7 +47,7 @@ In R console, go to **file > New project > Version Control > Git**
 
 and put your git link to 'Repository URL'
 
-You can see that new folder is made in your working directory. 
+You can see that new folder is made in your working directory. !!!
 
 <br>
 
