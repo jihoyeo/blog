@@ -22,7 +22,7 @@ interests:
 name: Jiho Yeo
 organizations:
 - name: KAIST Graduate school of Green Transportation
-  url: "gt.kaist.ac.kr"
+  url: "https://gt.kaist.ac.kr"
 role: PhD Candidate
 social:
 - icon: envelope
@@ -40,6 +40,6 @@ user_groups:
 - Visitors
 ---
 
-Jiho is Ph.D. Candidate at KAIST, Transportation Operation and Planning for Sustainability Lab. His research interests include transportation network, traffic prediction, traffic safety and analysis of transportation big data and human mobility. Recent research topic is dynamic ride-sharing with deep learning and optimization.
+Jiho is Ph.D. Candidate at KAIST, Transportation Operation and Planning for Sustainability Lab. His research interests include transportation network, traffic prediction, traffic safety and analysis of transportation big data and human mobility. Recent research topic lies in dynamic ride-sharing with deep learning and optimization.
 
 
