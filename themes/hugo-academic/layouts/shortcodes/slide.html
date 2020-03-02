@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 {{ $non_data_attributes := slice "id" "class" }}
 <section data-noprocess data-shortcode-slide
   {{ range $key, $value := $.Params }}
       {{ $attribute := cond (in $non_data_attributes $key) $key (delimit (slice "data" $key) "-") }}
       {{ $attribute | safeHTMLAttr }}="{{ $value }}"
   {{ end }}>
+=======
+version https://git-lfs.github.com/spec/v1
+oid sha256:5bc2a402512e7a5d7c0cb342c97af8b6f4b3722de5437be6eed24c32a7800ff7
+size 300
+>>>>>>> 853f11c5f006251504a0064c781ffc20d0fe088f

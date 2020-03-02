@@ -47,7 +47,11 @@ In R console, go to **file > New project > Version Control > Git**
 
 and put your git link to 'Repository URL'
 
+<<<<<<< HEAD
 You can see that new folder is made in your working directory. !!!
+=======
+You can see that new folder is made in your working directory. 
+>>>>>>> 853f11c5f006251504a0064c781ffc20d0fe088f
 
 <br>
 
@@ -64,7 +68,11 @@ Then type `new_site(theme="calintat/minimal")`
 
 Put `serve_site()` then you can see your homepage poped up
 
+<<<<<<< HEAD
 You can modify your website by changing files in your repository.!
+=======
+You can modify your website by changing files in your repository.
+>>>>>>> 853f11c5f006251504a0064c781ffc20d0fe088f
 
 <br>
 
