@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-{{ $taxonomy := "tags" }}
-{{ with .Param $taxonomy }}
-<div class="article-tags">
-  {{ range $index, $value := . }}
-  <a class="badge badge-light" href="{{ (site.GetPage (printf "/%s/%s" $taxonomy (. | urlize))).RelPermalink }}">{{ . }}</a>
-  {{ end }}
-</div>
-{{ end }}
-=======
 version https://git-lfs.github.com/spec/v1
-oid sha256:00f62fcb321345e01cb1edeafa5c7dd1660abc4b62cd47338e65ec37c3f0177c
-size 269
->>>>>>> 853f11c5f006251504a0064c781ffc20d0fe088f
+oid sha256:277e39c0198fa59cf7abda1dc5d34ff8ae3b57edbc3516dc18d9734a1450fb6d
+size 481

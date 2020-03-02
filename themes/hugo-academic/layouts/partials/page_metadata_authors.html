@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-{{/* Display author list. */}}
-
-{{ $taxonomy := "authors" }}
-{{ with .Param $taxonomy }}
-  {{ range $index, $value := . }}
-    {{- $profile_page := site.GetPage (printf "/%s/%s" $taxonomy (. | urlize)) -}}
-    {{- $name := $profile_page.Params.name | default ($value|markdownify) -}}
-    {{- if gt $index 0 }}, {{ end -}}
-    <span itemprop="author name" itemtype="http://schema.org/Person">
-      {{- with $profile_page -}}
-        <a href="{{.RelPermalink}}">{{$name}}</a>
-      {{- else -}}
-        {{$name}}
-      {{- end -}}
-    </span>
-  {{- end -}}
-{{ end }}
-=======
 version https://git-lfs.github.com/spec/v1
-oid sha256:51561937270f7e47b81b585198638ae7ed54e9ee457b082ed994bde0b0bec6ad
-size 566
->>>>>>> 853f11c5f006251504a0064c781ffc20d0fe088f
+oid sha256:3f1731fe3d78aed7e892141531e42e09e8661d7b176192e3aefae26048a6ef3c
+size 787

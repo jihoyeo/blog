@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-{{ partial "header.html" . }}
-{{ partial "navbar.html" . }}
-<div class="universal-wrapper pt-3">
-
-  <h1>{{ i18n "page_not_found" }}</h1>
-
-  {{/* Show search box if Academic's search engine is enabled. */}}
-  {{ if eq site.Params.search.engine 1 }}
-  <form class="d-flex align-items-center mb-3">
-    <input name="q" type="search" class="form-control" id="search-query" placeholder="{{ i18n "search_placeholder" }}" autocomplete="off">
-  </form>
-  {{ end }}
-
-  {{/* Suggest recently published pages to the user. */}}
-
-  <p>{{ i18n "404_recommendations" }}</p>
-
-  {{ $query := site.RegularPages }}
-  {{ $count := len $query }}
-  {{ if gt $count 0 }}
-  <h2>{{ i18n "user_profile_latest" }}</h2>
-  <ul>
-    {{ range first 10 $query }}
-      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-    {{ end }}
-  </ul>
-  {{ end }}
-
-</div>
-{{ partial "footer_container.html" . }}
-{{ partial "footer.html" . }}
-=======
 version https://git-lfs.github.com/spec/v1
-oid sha256:8bcbc91d8b600e3bce170ecdb0f287ec4690d17a8aafc7bf6751b87892206ebe
-size 905
->>>>>>> 853f11c5f006251504a0064c781ffc20d0fe088f
+oid sha256:c91b99bcf2d66c7c0d6afe40cc2090a45327064abead994d19b8bffb5b76727e
+size 1140

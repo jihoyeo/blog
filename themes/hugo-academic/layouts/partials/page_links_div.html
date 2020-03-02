@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-{{/* Div wrapper around page links. */}}
-{{/* The wrapper is hidden when the page has no link buttons. */}}
-
-{{ $page := . }}
-{{ $pdf_link := false }}
-{{ $cite_link := false }}
-{{ $slug := $page.File.ContentBaseName }}
-{{ $resource := $page.Resources.GetMatch (printf "%s.pdf" $slug) }}
-{{ with $resource }}
-  {{ $pdf_link = true }}
-{{ end }}
-
-{{ $resource := $page.Resources.GetMatch "*.bib" }}
-{{ with $resource }}
-  {{ $cite_link = true }}
-{{ end }}
-
-{{ if $cite_link | or $pdf_link | or .Params.external_link | or .Params.url_preprint | or .Params.url_pdf | or .Params.url_slides | or .Params.url_video | or .Params.url_source | or .Params.url_code | or .Params.url_dataset | or .Params.url_poster | or .Params.url_project | or .Params.links | or .Params.projects | or .Params.slides }}
-<div class="btn-links mb-3">
-  {{ with .Params.external_link }}
-  <a class="btn btn-outline-primary my-1" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "open_project_site" }}</a>
-  {{ end }}
-  {{ partial "page_links" (dict "page" $page "is_list" 0) }}
-</div>
-{{ end }}
-=======
 version https://git-lfs.github.com/spec/v1
-oid sha256:cf3cbb79c6efa39aa6777184bc6d1a4d8d247facca7836c5cbce54a8e663fc33
-size 1068
->>>>>>> 853f11c5f006251504a0064c781ffc20d0fe088f
+oid sha256:3f7db89c5e6679124acd038117853bd6e2253cff0157b5942d663a8f51218e92
+size 1298

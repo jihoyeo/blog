@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-{{ partial "header.html" . }}
-{{ partial "navbar.html" . }}
-
-{{ partial "page_header.html" . }}
-
-<div class="universal-wrapper">
-  {{ with .Content }}
-  <div class="article-style" itemprop="articleBody">{{ . }}</div>
-  {{ end }}
-  <ul>
-    {{ if gt (len .Sections) 0}}
-    {{ range .Sections }}
-    <li><h5><a href="{{.RelPermalink}}">{{.LinkTitle}}</a></h5> {{with .Params.summary}}<p>{{. | plainify | emojify}}</p>{{end}}</li>
-    {{end}}
-    {{end}}
-  </ul>
-</div>
-
-{{ partial "footer_container.html" . }}
-{{ partial "footer.html" . }}
-=======
 version https://git-lfs.github.com/spec/v1
-oid sha256:ea36f68d87c10319ef0e09f1c777bc020b1623cc9d29b32b62022dae970470cf
-size 539
->>>>>>> 853f11c5f006251504a0064c781ffc20d0fe088f
+oid sha256:7ac37c27605bb53cdbfece13b96a7ba0808c46afcdbfeb00b43e0831c4001a7d
+size 763

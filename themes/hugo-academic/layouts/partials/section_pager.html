@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-{{ $str := "" }}
-<div class="post-nav">
-  {{if .NextInSection}}
-  {{/* For the docs layout, prev/next labels are reversed. */}}
-  {{ if eq .Type "docs" }}{{ $str = "previous" }}{{else}}{{ $str = "next" }}{{end}}
-  <div class="post-nav-item">
-    <div class="meta-nav">{{ i18n $str }}</div>
-    <a href="{{.NextInSection.RelPermalink}}" rel="next">{{.NextInSection.Title}}</a>
-  </div>
-  {{end}}
-  {{if .PrevInSection}}
-  {{ if eq .Type "docs" }}{{ $str = "next" }}{{else}}{{ $str = "previous" }}{{end}}
-  <div class="post-nav-item">
-    <div class="meta-nav">{{ i18n $str }}</div>
-    <a href="{{.PrevInSection.RelPermalink}}" rel="prev">{{.PrevInSection.Title}}</a>
-  </div>
-  {{end}}
-</div>
-=======
 version https://git-lfs.github.com/spec/v1
-oid sha256:90ac8cf9bccf192ff4c8bd5c5912f1bc483f6bac69025b60cde5d9b6d7f5993f
-size 693
->>>>>>> 853f11c5f006251504a0064c781ffc20d0fe088f
+oid sha256:3f8f09477b1792d083288b35ce879c8f77e056faadb7e2ed8649a7482a114a55
+size 915
