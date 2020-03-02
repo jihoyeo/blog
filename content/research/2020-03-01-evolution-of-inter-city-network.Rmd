@@ -31,7 +31,7 @@ projects: []
 
 ## Research summary
 
-[Dashboard](/html/inter-city_travel_network.html)
+[Dashboard](/html/Inter-city_travel_network.html)
 
 
 
