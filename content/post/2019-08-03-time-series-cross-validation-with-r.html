@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d98b147892392e3998626521a16493164ff96c3f056a10da66922a1aa970ac44
-size 1126
+---
+title: Time-series Cross Validation with R
+author: Jiho Yeo
+date: '2019-08-03'
+slug: time-series-cross-validation-with-r
+categories:
+  - R
+  - Statistics
+  - Study
+  - Time series analysis
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2019-08-03T01:59:33+09:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+
+<p>time-series model의 정확도를 어떻게 평가할 것인지에 대해 이곳에 정리한다. time-series model의 경우 정확도를 평가하기 위해 신경써야 할 부분이 많다. forecast horizon도 신경을 써야 하고, 어떤 시점에서 forecast를 할지도 중요하다. 또한 이것을 모델별로 비교할 필요가 있다. 이에 대한 기본 개념은 <a href="https://towardsdatascience.com/time-series-nested-cross-validation-76adba623eb9">이곳</a>에 나와있다. 이 포스팅에서는 실습을 위해 <a href="https://robjhyndman.com/hyndsight/tscvexample/" class="uri">https://robjhyndman.com/hyndsight/tscvexample/</a> 있는 내용을 따라하면서 R코드를 작성해보았다.</p>
