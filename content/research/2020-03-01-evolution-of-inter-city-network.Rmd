@@ -17,7 +17,7 @@ featured: no
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 
 image:
-  caption: "dfdff"
+  caption: ""
   focal_point: 
   preview_only: no
   
@@ -31,7 +31,9 @@ projects: []
 
 ## Research summary
 
-[Dashboard](/html/Inter-city_travel_network.html)
+
+
+[Dashboard2](/html/Inter-city_travel_network.html)
 
 
 
