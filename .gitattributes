@@ -1,4 +1,4 @@
 '*.html' filter=lfs diff=lfs merge=lfs -text
 .html filter=lfs diff=lfs merge=lfs -text
-static/html/** filter=lfs diff=lfs merge=lfs -text
 *.html filter=lfs diff=lfs merge=lfs -text
+static/html/** filter=lfs diff=lfs merge=lfs -text
