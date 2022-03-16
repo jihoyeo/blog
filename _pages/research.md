@@ -5,19 +5,19 @@ title: Research
 search_exclude: true
 ---
 
- # Research Summary & Visualization
+ ### Research Summary & Visualization
 
- ## 1. A
+ #### 1. A
  - dd
  - B
  - C 
 
- ## 2. B
+ #### 2. B
  - A
  - B
  - C 
 
- ## 3. C
+ #### 3. C
  - A
  - B
  - C 
