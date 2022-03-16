@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 permalink: /research/
 title: Research
 search_exclude: true
@@ -8,9 +8,9 @@ search_exclude: true
  # Research Summary & Visualization
 
  ## 1. A
-  - A
-   - B
-    - C 
+ - dd
+ - B
+ - C 
 
  ## 2. B
  - A
