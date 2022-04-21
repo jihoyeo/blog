@@ -22,7 +22,7 @@ search_exclude: true
 - B
 - C 
 
-[link]("https://jihoyeo.notion.site/Etc-VSCode-6bfd112e2dbf4465afcbfe4c57ae4154")
+[link](https://jihoyeo.notion.site/Etc-VSCode-6bfd112e2dbf4465afcbfe4c57ae4154)
 
 
 
