@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /research/
-title: Research1313
+title: Research
 search_exclude: true
 ---
 
