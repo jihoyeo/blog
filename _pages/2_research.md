@@ -6,7 +6,6 @@ search_exclude: true
 ---
 
 ### Refereed Journal Publications 
-
 - Kim, S., Lee, S., Ko, E., Jang, K., & **Yeo, J.** (2021). ["Changes in car and bus usage amid the COVID-19 pandemic: Relationship with land use and land price"](https://www.sciencedirect.com/science/article/pii/S0966692321002210?casa_token=83JpLaDeJJ0AAAAA:Mm6Dud5kv-FWXFig4N_mbZdXvcpQeCq95tYHaavyvm_F_hgxOlUh2InRe9u_FtHkp9rEcuyHm9HL) Journal of Transport Geography, 96, 103168. (**Corresponding**)
 - **Yeo, J.**, & Park, S. H. (2021). ["Effect of Smartphone Dependency on Smartphone Use While Driving"](https://www.mdpi.com/2071-1050/13/10/5604) Sustainability, 13(10), 5604.
 - **Yeo, J.**, Lee, J., Cho, J., Kim, D., Jang, K. (2020) [“Effects of speed humps on vehicle speed and pedestrian crashes in South Korea”](https://www.sciencedirect.com/science/article/pii/S002243752030092X?casa_token=TtQdVc4F-HoAAAAA:a7_mItDyaVEMgME54qQZvxTyaVQHwdIFma8BF09tM16L4Ub-nV37j9vklqnTp6inOMPRC-wwIozJ) Journal of Safety Research
@@ -17,14 +16,12 @@ search_exclude: true
 
 
 ### Working papers
-
 - **Yeo, J.**, Lee, S., Jang, K., Lee, J. “Real-time relocation of connected autonomous vehicles in Mobility-on-Demand system accounting for inter- and intra-zonal relocation strategies.”
 - **Yeo, J.**, Kim, S., Jang, K. “Origin-destination inter-city traffic demand prediction using Stratified Graph Convolutional Network.” IEEE Transactions on Intelligent Transportation Systems (*under review*)
 - **Yeo, J.**, Shim, J., Jang, K. “Evolution of an inter-city travel network: a weighted network analysis of highway and railway travel.”
 
 
 ### INTERNATIONAL CONFERENCE PAPERS
-
 - **Yeo, J.**, Lee, J. and Jang, K. (2018) “Develop Safety Surrogate Measure for Evaluating Motor Carrier Companies and Drivers” Proceedings of Road Safety on Five Continents, Jeju Island, South Korea
 - Shim, G., Lee, S., **Yeo, J.**, Jang, K. (2017) “Evaluating Urban Network Performance Using Individual Vehicle Trip Data” 18th IEEE International Conference on Mobile Data Management (IEEE MDM 2017)
 - Lee, S., **Yeo, J.**, Jang, K. (2017) “Analysis of Mobility Patterns using Trip Data from RFID-based Toll-Collection Systems”, 18th IEEE International Conference on Mobile Data Management (IEEE MDM 2017)
@@ -35,5 +32,4 @@ search_exclude: true
 
 
 ### Technology Transfer 
-
 - Jang, K.(40%), **Yeo, J.**(40%), Kim, S. (10%), Lee, J.(10%) (2020) “Travel Demand prediction Program for Mobility-on-Demand”, Nature Mobility
