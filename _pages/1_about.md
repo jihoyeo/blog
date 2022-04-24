@@ -4,7 +4,9 @@ title: About Me
 permalink: /about/
 ---
 
-**Jiho Yeo** is an Associate professor in Department of Big Data Application, Hannam University, South Korea. He received my Ph.D. from the Cho Chun Shik Graduate School for Green Transportation, KAIST in 2020, under the supervision of Prof. Kitae Jang. He pursue multidisciplinary research. In particular, based on various urban and transportation data, he is interseted in data-driven research that is helpful for operation of various mobility systems and construction of smart cities. Recent research topic lies in developing deep learning and optimization algorithms that are utilized in mobility-on-demand systems. 
+| ![Flowers](../images/jihoyeo.jpeg) | **Jiho Yeo** is an Associate professor in Department of Big Data Application, Hannam University, South Korea. He received my Ph.D. from the Cho Chun Shik Graduate School for Green Transportation, KAIST in 2020, under the supervision of Prof. Kitae Jang. He pursue multidisciplinary research. In particular, based on various urban and transportation data, he is interseted in data-driven research that is helpful for operation of various mobility systems and construction of smart cities. Recent research topic lies in developing deep learning and optimization algorithms that are utilized in mobility-on-demand systems. | 
+
+
 
 **Curriculum Vitae** 
 Download [here](../images/CV_JihoYeo.pdf)
