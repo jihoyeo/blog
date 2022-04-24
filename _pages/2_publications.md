@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 permalink: /publication/
 title: Publications
 search_exclude: true
