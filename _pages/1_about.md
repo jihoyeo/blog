@@ -9,7 +9,7 @@ permalink: /about/
 
 
 **Curriculum Vitae** 
-Download [here](../images/CV_JihoYeo.pdf)
+Download [here](../images/CV_JihoYeo.pdf)  
 [Github](https://github.com/jihoyeo) | [Google scholar](https://scholar.google.com/citations?hl=ko&user=nCF7lDoAAAAJ&view_op=list_works&gmla=AJsN-F4oiuqLY19Sm-zR1mOuijwlD2pSzrXLnY9GAOoPvP_-3q5zHR0ys8uo15YPuGPx6JQ337DVkmT1xckPi54kLKrZmma793BLi3XMOg2yvIXg1GLedIDaK5LUfEtEonVeseP_7yUU)
 
 --- 
