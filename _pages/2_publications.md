@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /research/
-title: Research
+permalink: /publication/
+title: Publications
 search_exclude: true
 ---
 
