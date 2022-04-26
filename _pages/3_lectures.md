@@ -5,6 +5,8 @@ title: Lectures
 search_exclude: true
 ---
 
+## Lectures
+
 ### 2022
 
 `-` Advanced Python (Department of Big Data Application, Hannam University) [[syllabus]](https://jihoyeo.notion.site/Advanced-Python-Python-bc4786b728264300b46d67e16047f037)  
