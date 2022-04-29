@@ -10,7 +10,7 @@ search_exclude: true
 
 간단한 설명
 
-![](../images/inter_city_vis.gif){: width="50%" height="50%"}{: .center}
+![](../images/inter_city_vis.gif){: width="100%" height="100%"}{: .center}
 
 ### Changes in car and bus usage amid the COVID-19 pandemic
 
