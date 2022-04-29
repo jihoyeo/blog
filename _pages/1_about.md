@@ -42,6 +42,6 @@ td, th {
 
 ### Contact Information
 
-`-` Email: jihoyeo@hnu.kr  
-`-` Office: +82-42-629-7634
+- Email: jihoyeo@hnu.kr  
+- Office: +82-42-629-7634
 
