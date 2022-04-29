@@ -31,7 +31,7 @@ td, th {
 
 ---
 
-### Research interests 
+## Research interests 
 
 - Urban Mobility Operation System & Mobility-on-Demand System  
 - Application of A.I. to transportation & mobility
@@ -40,7 +40,7 @@ td, th {
 
 ---
 
-### Contact Information
+## Contact Information
 
 - Email: jihoyeo@hnu.kr  
 - Office: +82-42-629-7634
