@@ -14,7 +14,7 @@ td, th {
 
 --- 
 
-### Education
+## Education
 
 **Ph.D.** The Cho Chun Shik Graduate School for Green Transportation, KAIST, *2020*  
 **M.S.** The Cho Chun Shik Graduate School for Green Transportation, KAIST, *2015*  
@@ -22,7 +22,7 @@ td, th {
 
 ---
 
-### Positions 
+## Positions 
 
 **Associate Professor**, Department of Big Data Application, Hannam university, *Mar. 2021 – Present*  
 **Research Fellow**, Grab-NUS AI Laboratory, National University of Singapore, Nov. 2020 – Feb. 2021  
