@@ -19,7 +19,7 @@ td, th {
 ---
 
 ## 1. Human Mobility
-### Long-term evolution pattern of inter-city travel network
+### **Long-term evolution pattern of inter-city travel network**
 
 how the inter-city travel network evolves over 40 years using freeway and railway travel data. See detailed visualizations at https://jihoyeo.github.io/inter-city_network/
 
