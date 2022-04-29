@@ -38,7 +38,9 @@ This research was conducted in collaboration with Suji Kim and Kitae Jang.
 
 ### Vehicle relocation algorithm for Mobility-on-Demand System
 
-This research was conducted in collaboration with Jinwoo Lee, Sujin Kim, and Kitae Jang.
+Propose a real-time autonomous mobility-on-demand (AMoD) operation model that includes dynamic relocation of idle vehicles.   We structure the original system-level problem into a bi-level framework with the inter-zonal and inter-zonal relocation. This research was conducted in collaboration with Jinwoo Lee, Sujin Kim, and Kitae Jang.
+
+![](../images/relocation.png){: width="100%" height="100%"}{: .center}
 
 ### Construct Digital Twin for mobility system
 
