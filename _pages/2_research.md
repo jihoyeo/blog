@@ -25,6 +25,8 @@ Investigate how the inter-city travel network evolves over 40 years using freewa
 
 ![](../images/inter_city_vis.gif){: width="100%" height="100%"}{: .center}
 
+<br>
+
 ### **Changes in car and bus usage amid the COVID-19 pandemic**
 
 Temporal patterns of confirmed cases of COVID-19, car usage, and bus usage during the study period. The trip-chain data set has 32,488,484 trip-chains for bus travel and 99,024,947 trip-chains for car travel during the temporal scope—February to April 2020.
@@ -42,6 +44,8 @@ Propose a real-time autonomous mobility-on-demand (AMoD) operation model that in
 
 ![](../images/relocation.png){: width="100%" height="100%"}{: .center}
 
+<br>
+
 ### **Construct Digital Twin for urban mobility operation system**
 
 Construct the digital twin framework for urban mobility operation system. In the digital twin framework, various algorithms (dispatch, routing, relocation) and strategies (carpooling, dynamic pricing, etc.) can be tested for operating mobility system efficiently. This research is being conducting in collaboration with Hyukjoo Yeon, Taebum Yum, and Kitae Jang.
@@ -57,6 +61,8 @@ Construct the digital twin framework for urban mobility operation system. In the
 To evaluate the effectiveness of speed humps, the speed profiles of vehicles passing speed humps were analyzed along with pedestrian crash records near speed humps. This research was conducted in collaboration with Jooyoung Lee and Kitae Jang.
 
 ![](../images/speed_hump.png){: width="100%" height="100%"}{: .center}
+
+<br>
 
 ### **Optimal Location of Vertiport for Urban Air Mobility (UAM)**
 
@@ -74,11 +80,15 @@ Construct Graph Convolutional Network to reflect both spatial and temporal depen
 
 ![](../images/inter_city_demand.png){: width="100%" height="100%"}{: .center}
 
+<br>
+
 ### **Crash rish prediction using Deep learning**
 
 Predicting the risk of traffic crashes using machine learning techniques (XGBoost). In a grid unit of 1km by 1km, the crash risk for the next 3 hours is predicted and validated.
 
 ![](../images/crash_prediction.png){: width="100%" height="100%"}{: .center}
+
+<br>
 
 ### **Estimated Time of Arrival in food delivery system**
 
