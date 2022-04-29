@@ -33,9 +33,9 @@ td, th {
 
 ### Research interests 
 
-- Smart mobility & Mobility-on-Demand system  
-- Application of deep learning in intelligent transportation  
-- Big Transportation Data Analysis  
+- Urban Mobility Operation System & Mobility-on-Demand System  
+- Application of A.I. to transportation & mobility
+- Big Data in Transportation  
 - Traffic Safety
 
 ---
