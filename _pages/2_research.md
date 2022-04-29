@@ -21,7 +21,7 @@ td, th {
 ## 1. Human Mobility
 ### **Long-term evolution pattern of inter-city travel network**
 
-how the inter-city travel network evolves over 40 years using freeway and railway travel data. See detailed visualizations at [here](https://jihoyeo.github.io/inter-city_network/)
+Investigate how the inter-city travel network evolves over 40 years using freeway and railway travel data. See detailed visualizations at [here](https://jihoyeo.github.io/inter-city_network/). This research is being conducting in collaboration with Jisup Shim and Kitae Jang.
 
 ![](../images/inter_city_vis.gif){: width="100%" height="100%"}{: .center}
 
@@ -54,11 +54,15 @@ Construct the digital twin framework for urban mobility operation system. In the
 
 ### **Effect of speed humps on vehicle speed and crash severity**
 
-This research was conducted in collaboration with Jooyoung Lee and Kitae Jang.
+To evaluate the effectiveness of speed humps, the speed profiles of vehicles passing speed humps were analyzed along with pedestrian crash records near speed humps. This research was conducted in collaboration with Jooyoung Lee and Kitae Jang.
+
+![](../images/speed_hump.png){: width="100%" height="100%"}{: .center}
 
 ### **Optimal Location of Vertiport for Urban Air Mobility (UAM)**
 
-This research was conducted in collaboration with Yeongmin Kwon.
+Using Smartcard data in Seoul Metropolitan Areas, converted passenger demands to UAM from public transit were estimated. Based on converted demand, optimal locations of vertiports are also derived that maximize UAM demands. This research was conducted in collaboration with Yeongmin Kwon and Suji Kim.
+
+![](../images/UAM.png){: width="100%" height="100%"}{: .center}
 
 ---
 
