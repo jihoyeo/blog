@@ -50,7 +50,9 @@ This research was conducted in collaboration with Yeongmin Kwon.
 
 ### Traffic demand prediction
 
+Construct Graph Convolutional Network to reflect both spatial and temporal dependencies that often characterize Origin-Destination traffic demands. The performance of the model is tested using the inter-city travel data of Korean highways from 2015 to 2019.
 
+![](../images/inter_city_demand.png){: width="100%" height="100%"}{: .center}
 
 ### Crash rish prediction using Deep learning
 
@@ -60,5 +62,6 @@ Predicting the risk of traffic crashes using machine learning techniques (XGBoos
 
 ### Estimated Time of Arrival in food delivery system
 
+Develop prediction model of estimated time of arrival (ETA) of Food delivery system. There is greater uncertainty in food delivery than in other ETA models: 1) There are various participants (delivery/restaurant/orderer). 2) The uncertainty of the forecast is very large. 
 
-
+![](../images/food_delivery.png){: width="100%" height="100%"}{: .center}
