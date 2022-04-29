@@ -84,4 +84,4 @@ Predicting the risk of traffic crashes using machine learning techniques (XGBoos
 
 Develop prediction model of estimated time of arrival (ETA) of Food delivery system. There is greater uncertainty in food delivery than in other ETA models: 1) There are various participants (delivery/restaurant/orderer). 2) The uncertainty of the forecast is very large. 
 
-![](../images/food_delivery.png){: width="100%" height="100%"}{: .center}
+![](../images/food_delivery2.png){: width="100%" height="100%"}{: .center}
