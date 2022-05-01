@@ -332,7 +332,7 @@ img.emoji { display: inline !important; vertical-align: baseline !important; }
 
 .page-content { -webkit-font-smoothing: antialiased !important; text-rendering: optimizeLegibility !important; font-family: "Lora", sans-serif !important; }
 
-.post-content p, .post-content li { font-size: 15px; color: #515151; line-height: 1.5; }
+.post-content p, .post-content li { font-size: 15px; color: #515151; line-height: 1.8; }
 
 .post-link { font-weight: normal; }
 
