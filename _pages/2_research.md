@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 permalink: /research/
 title: Research
 search_exclude: true
