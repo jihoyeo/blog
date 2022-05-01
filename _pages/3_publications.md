@@ -5,6 +5,12 @@ title: Publications
 search_exclude: true
 ---
 
+```{css}
+li {
+  line-height: 10;
+}
+```
+
 ## Refereed Journal Publications 
 
 - Kim, S., Lee, S., Ko, E., Jang, K., & **Yeo, J.** (2021). ["Changes in car and bus usage amid the COVID-19 pandemic: Relationship with land use and land price"](https://www.sciencedirect.com/science/article/pii/S0966692321002210?casa_token=83JpLaDeJJ0AAAAA:Mm6Dud5kv-FWXFig4N_mbZdXvcpQeCq95tYHaavyvm_F_hgxOlUh2InRe9u_FtHkp9rEcuyHm9HL) Journal of Transport Geography, 96, 103168. (**Corresponding**)
