@@ -5,15 +5,13 @@ title: Lectures
 search_exclude: true
 ---
 
-## Lectures
-
-### 2022
+## 2022
 
 - Advanced Python (Department of Big Data Application, Hannam University) [[syllabus]](https://jihoyeo.notion.site/Advanced-Python-Python-bc4786b728264300b46d67e16047f037)  
 -  Data mining (Department of Big Data Application, Hannam University) [[syllabus]](https://jihoyeo.notion.site/Data-mining-facd9c4df9f5483ca09eb7e429cfefec)  
 -  Open Data Analysis (Department of Big Data Application, Hannam University) [[syllabus]](https://jihoyeo.notion.site/Open-Data-Analysis-77c436ebacca42e9b2ea22c75ae7b1bc)
 
-### 2021
+## 2021
 
 -  Statistical Analysis (Department of Big Data Application, Hannam University) [[syllabus]](https://jihoyeo.notion.site/Statistical-Analysis-40dc3e18837e47859535d58d4351b8e9)  
 -  Basics Statistics (Department of Big Data Application, Hannam University) [[syllabus]](https://jihoyeo.notion.site/Basic-Statistics-7853cd6a84d2454da222396a4eada55c)  
