@@ -21,16 +21,18 @@ img.emoji{
   color: light-grey;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
 .page-content {
         -webkit-font-smoothing: antialiased !important;
         text-rendering: optimizeLegibility !important;
         //font-family: "Segoe UI", SegoeUI, Roboto, "Segoe WP", "Helvetica Neue", "Helvetica", "Tahoma", "Arial", sans-serif !important;
-        font-family: "Helvetica", sans-serif !important;
+        font-family: "Lora", sans-serif !important;
 }
 
 // make non-headings slightly lighter
 .post-content p, .post-content li {
-   font-size: 50px;
+   font-size: 20px;
    color: #515151;
 }
 
