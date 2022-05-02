@@ -48,7 +48,7 @@ Propose a real-time autonomous mobility-on-demand (AMoD) operation model that in
 
 ### **Construct Digital Twin for urban mobility operation system**
 
-Construct the digital twin framework for urban mobility operation system. In the digital twin framework, various algorithms (dispatch, routing, relocation) and strategies (carpooling, dynamic pricing, etc.) can be tested for operating mobility system efficiently. This research is being conducting in collaboration with Hyukjoo Yeon, Taebum Yum, and Kitae Jang. See 1-day visualization [here](https://deckgl-trip-layer-xfyqvd.stackblitz.io)
+Construct the digital twin framework for urban mobility operation system. In the digital twin framework, various algorithms (dispatch, routing, relocation) and strategies (carpooling, dynamic pricing, etc.) can be tested for operating mobility system efficiently. This research is being conducting in collaboration with Hyukjoo Yeon, Taebum Yum, and Kitae Jang. See 1-day visualization [here](https://mobilty-for-disabled.stackblitz.io)
 
 ![{caption=Digital Twin for mobility system for the disabled in Seoul}](../images/UMOS.gif){: width="100%" height="100%"}{: .center}
 
