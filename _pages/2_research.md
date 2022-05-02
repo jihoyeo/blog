@@ -18,7 +18,7 @@ td, th {
 
 ---
 
-## **1. Human Mobility**
+## **1. HUMAN MOBILITY**
 ### **Long-term evolution pattern of inter-city travel network**
 
 Investigate how the inter-city travel network evolves over 40 years using freeway and railway travel data. See detailed visualizations at [here](https://jihoyeo.github.io/inter-city_network/). This research is being conducting in collaboration with Jisup Shim and Kitae Jang.
@@ -36,7 +36,7 @@ This research was conducted in collaboration with Suji Kim and Kitae Jang.
 
 ---
 
-## **2. Urban Mobility Operation System**
+## **2. URBAN MOBILITY OPERATION SYSTEM**
 
 ### **Vehicle relocation algorithm for Mobility-on-Demand System**
 
@@ -54,7 +54,7 @@ Construct the digital twin framework for urban mobility operation system. In the
 
 ---
 
-## **3. Big Data in Transportation & Mobility**
+## **3. BIG DATA IN TRANSPORTATION & MOBILITY**
 
 ### **Effect of speed humps on vehicle speed and crash severity**
 
@@ -72,7 +72,7 @@ Using Smartcard data in Seoul Metropolitan Areas, converted passenger demands to
 
 ---
 
-## **4. A.I. in Transportation & Mobility**
+## **4. A.I. IN TRANSPORTATION & MOBILITY**
 
 ### **Traffic demand prediction**
 

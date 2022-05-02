@@ -5,7 +5,7 @@ title: Publications
 search_exclude: true
 ---
 
-## Refereed Journal Publications 
+## REFEREED JOURNAL PUBLICATIONS
 
 - Kim, S., Lee, S., Ko, E., Jang, K., & **Yeo, J.** (2021). ["Changes in car and bus usage amid the COVID-19 pandemic: Relationship with land use and land price"](https://www.sciencedirect.com/science/article/pii/S0966692321002210?casa_token=83JpLaDeJJ0AAAAA:Mm6Dud5kv-FWXFig4N_mbZdXvcpQeCq95tYHaavyvm_F_hgxOlUh2InRe9u_FtHkp9rEcuyHm9HL) Journal of Transport Geography, 96, 103168. (**Corresponding**)
 - **Yeo, J.**, & Park, S. H. (2021). ["Effect of Smartphone Dependency on Smartphone Use While Driving"](https://www.mdpi.com/2071-1050/13/10/5604) Sustainability, 13(10), 5604.
@@ -17,7 +17,7 @@ search_exclude: true
 
 ---
 
-## Working papers
+## WORKING PAPERS
 
 - **Yeo, J.**, Lee, S., Jang, K., Lee, J. “Real-time relocation of connected autonomous vehicles in Mobility-on-Demand system accounting for inter- and intra-zonal relocation strategies.”
 - **Yeo, J.**, Kim, S., Jang, K. “Origin-destination inter-city traffic demand prediction using Stratified Graph Convolutional Network.” IEEE Transactions on Intelligent Transportation Systems (*under review*)
@@ -37,5 +37,5 @@ search_exclude: true
 
 ---
 
-## Technology Transfer 
+## TECHNOLOGY TRANSFER
 - Jang, K.(40%), **Yeo, J.**(40%), Kim, S. (10%), Lee, J.(10%) (2020) “Travel Demand prediction Program for Mobility-on-Demand”, Nature Mobility

@@ -16,7 +16,7 @@ td, th {
 
 --- 
 
-## Education
+## EDUCATION
 
 **Ph.D.** The Cho Chun Shik Graduate School for Green Transportation, KAIST, *2020*  
 **M.S.** The Cho Chun Shik Graduate School for Green Transportation, KAIST, *2015*  
@@ -24,7 +24,7 @@ td, th {
 
 ---
 
-## Positions 
+## POSITIONS 
 
 **Associate Professor**, Department of Big Data Application, Hannam university, *Mar. 2021 – Present*  
 **Research Fellow**, Grab-NUS AI Laboratory, National University of Singapore, Nov. 2020 – Feb. 2021  
@@ -33,7 +33,7 @@ td, th {
 
 ---
 
-## Research interests 
+## RESEARCH INTERESTS 
 
 - Urban Mobility Operation System & Mobility-on-Demand System  
 - Application of A.I. to transportation & mobility
@@ -42,7 +42,7 @@ td, th {
 
 ---
 
-## Contact Information
+## CONTACT INFORMATION
 
 - Email: jihoyeo@hnu.kr  
 - Office: +82-42-629-7634
