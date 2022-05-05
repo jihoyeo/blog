@@ -1,7 +1,7 @@
 ---
 layout: post
 permalink: /lectures/
-title: Lectures
+title: LECTURES
 search_exclude: true
 ---
 

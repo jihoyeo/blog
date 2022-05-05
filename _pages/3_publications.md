@@ -1,7 +1,7 @@
 ---
 layout: post
 permalink: /publication/
-title: Publications
+title: PUBLICATIONS
 search_exclude: true
 ---
 

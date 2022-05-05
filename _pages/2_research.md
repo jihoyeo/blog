@@ -1,7 +1,7 @@
 ---
 layout: post
 permalink: /research/
-title: Research
+title: RESEARCH
 search_exclude: true
 ---
 
