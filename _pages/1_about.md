@@ -18,9 +18,9 @@ td, th {
 
 ## EDUCATION
 
-**Ph.D.** The Cho Chun Shik Graduate School for Green Transportation, KAIST, *2020*  
-**M.S.** The Cho Chun Shik Graduate School for Green Transportation, KAIST, *2015*  
-**B.S.** Department of Urban Planning, Hanyang University, Seoul, Korea, *2010*  
+**Ph.D.** The Cho Chun Shik Graduate School of Mobility, KAIST, *2020*  
+**M.S.** The Cho Chun Shik Graduate School of Mobility, KAIST, *2015*  
+**B.S.** Department of Urban Planning, Hanyang University, *2010*  
 
 ---
 
