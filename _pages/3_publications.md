@@ -7,6 +7,8 @@ search_exclude: true
 
 ## REFEREED JOURNAL PUBLICATIONS
 
+- Yeon, H., Eom, T., Jang, K., & **Yeo, J.** (2023). ["DTUMOS, digital twin for large-scale urban mobility operating system"](https://www.nature.com/articles/s41598-023-32326-9). Scientific Reports, 13(1), 1-11. (**Corresponding**)
+- Shim, J., & **Yeo, J.** (2022). ["An Evaluation Method of Road Link Functionality Using Individual Trajectory Data and Weighted Network Analysis"](https://www.hindawi.com/journals/jat/2022/4960882/).  Journal of Advanced Transportation, vol. 2022, Article ID 4960882, 10 pages, 2022. (**Corresponding**)
 - Kim, S., Lee, S., Ko, E., Jang, K., & **Yeo, J.** (2021). ["Changes in car and bus usage amid the COVID-19 pandemic: Relationship with land use and land price"](https://www.sciencedirect.com/science/article/pii/S0966692321002210?casa_token=83JpLaDeJJ0AAAAA:Mm6Dud5kv-FWXFig4N_mbZdXvcpQeCq95tYHaavyvm_F_hgxOlUh2InRe9u_FtHkp9rEcuyHm9HL) Journal of Transport Geography, 96, 103168. (**Corresponding**)
 - **Yeo, J.**, & Park, S. H. (2021). ["Effect of Smartphone Dependency on Smartphone Use While Driving"](https://www.mdpi.com/2071-1050/13/10/5604) Sustainability, 13(10), 5604.
 - **Yeo, J.**, Lee, J., Cho, J., Kim, D., Jang, K. (2020) [“Effects of speed humps on vehicle speed and pedestrian crashes in South Korea”](https://www.sciencedirect.com/science/article/pii/S002243752030092X?casa_token=TtQdVc4F-HoAAAAA:a7_mItDyaVEMgME54qQZvxTyaVQHwdIFma8BF09tM16L4Ub-nV37j9vklqnTp6inOMPRC-wwIozJ) Journal of Safety Research
@@ -19,14 +21,14 @@ search_exclude: true
 
 ## WORKING PAPERS
 
-- **Yeo, J.**, Lee, S., Jang, K., Lee, J. “Real-time relocation of connected autonomous vehicles in Mobility-on-Demand system accounting for inter- and intra-zonal relocation strategies.”
-- **Yeo, J.**, Kim, S., Jang, K. “Origin-destination inter-city traffic demand prediction using Stratified Graph Convolutional Network.” IEEE Transactions on Intelligent Transportation Systems (*under review*)
+- **Yeo, J.**, Lee, S., Jang, K., Lee, J. “Real-time relocation of connected autonomous vehicles in Mobility-on-Demand system accounting for inter- and intra-zonal relocation strategies.” IEEE Transactions on Intelligent Vehicles (*under review*)
+- **Yeo, J.**, Kim, S., Jang, K. “Origin-destination inter-city traffic demand prediction using Stratified Graph Convolutional Network.” Journal of Intelligent Transportation Systems (*under review*)
 - **Yeo, J.**, Shim, J., Jang, K. “Evolution of an inter-city travel network: a weighted network analysis of highway and railway travel.”
 
 ---
 
 ## INTERNATIONAL CONFERENCE PAPERS
-
+- **Yeo, J.**, Lee, S., Jang, K., & Lee, J. (2023). Real-time operations of shared connected autonomous vehicles with inter-and intra-zonal relocation. Transportation Research Board 102nd Annual Meeting, Washington D.C.
 - **Yeo, J.**, Lee, J. and Jang, K. (2018) “Develop Safety Surrogate Measure for Evaluating Motor Carrier Companies and Drivers” Proceedings of Road Safety on Five Continents, Jeju Island, South Korea
 - Shim, G., Lee, S., **Yeo, J.**, Jang, K. (2017) “Evaluating Urban Network Performance Using Individual Vehicle Trip Data” 18th IEEE International Conference on Mobile Data Management (IEEE MDM 2017)
 - Lee, S., **Yeo, J.**, Jang, K. (2017) “Analysis of Mobility Patterns using Trip Data from RFID-based Toll-Collection Systems”, 18th IEEE International Conference on Mobile Data Management (IEEE MDM 2017)
