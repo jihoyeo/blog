@@ -23,7 +23,6 @@ search_exclude: true
 
 ## WORKING PAPERS
 
-- **Yeo, J.**, Lee, S., Jang, K., Lee, J. “Real-time relocation of connected autonomous vehicles in Mobility-on-Demand system accounting for inter- and intra-zonal relocation strategies.” IEEE Transactions on Intelligent Vehicles (*under review*)
 - **Yeo, J.**, Kim, S., Jang, K. “Origin-destination inter-city traffic demand prediction using Stratified Graph Convolutional Network.” Journal of Intelligent Transportation Systems (*under review*)
 - **Yeo, J.**, Shim, J., Jang, K. “Evolution of an inter-city travel network: a weighted network analysis of highway and railway travel.”
 
