@@ -5,8 +5,15 @@ title: LECTURES
 search_exclude: true
 ---
 
-## 2022
+## 2023
+- Advanced Python (Department of Big Data Application, Hannam University) [[syllabus]](https://jihoyeo.notion.site/Advanced-Python-Python-3eca79f338bf4f94900f1c00b73cfdf2?pvs=4)  
+- Open Data Analysis (Department of Big Data Application, Hannam University) [[syllabus]](https://jihoyeo.notion.site/Open-Data-Analysis-04292d75a22e46bbb3f7b0ded400f004?pvs=4)
+- Data mining (Department of Big Data Application, Hannam University) [[syllabus]](https://jihoyeo.notion.site/Data-mining-86dafc936d1e48e6bca85e4b815c1cba?pvs=4)  
+- Advanced Deep Learning (Department of Big Data Application, Hannam University) [[syllabus]](https://jihoyeo.notion.site/3cccf25c4f6e465e883c6b856f15c2b7?pvs=4)  
 
+## 2022
+- Deep Learning (Department of Big Data Application, Hannam University) [[syllabus]](https://jihoyeo.notion.site/Deep-learning-663ca0bb30784d27a3bb18cc15fbf745?pvs=4)  
+- Machine Learning (Department of Big Data Application, Hannam University) [[syllabus]](https://jihoyeo.notion.site/Machine-learning-4c67f817ad68445aa51ad464bbb46a0a?pvs=4)  
 - Advanced Python (Department of Big Data Application, Hannam University) [[syllabus]](https://jihoyeo.notion.site/Advanced-Python-Python-bc4786b728264300b46d67e16047f037)  
 - Data mining (Department of Big Data Application, Hannam University) [[syllabus]](https://jihoyeo.notion.site/Data-mining-facd9c4df9f5483ca09eb7e429cfefec)  
 - Open Data Analysis (Department of Big Data Application, Hannam University) [[syllabus]](https://jihoyeo.notion.site/Open-Data-Analysis-77c436ebacca42e9b2ea22c75ae7b1bc)

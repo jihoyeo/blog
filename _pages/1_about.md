@@ -26,7 +26,7 @@ td, th {
 
 ## POSITIONS 
 
-**Associate Professor**, Department of Big Data Application, Hannam university, *Mar. 2021 – Present*  
+**Assistant Professor**, Department of Big Data Application, Hannam university, *Mar. 2021 – Present*  
 **Research Fellow**, Grab-NUS AI Laboratory, National University of Singapore, Nov. 2020 – Feb. 2021  
 **Postdoctoral Researcher**, Mechanical Engineering Research Institute, KAIST, *Aug. 2020 – Nov. 2020*  
 **Graduate Research Assistant**, Transportation Operation and Planning for Sustainability Laboratory, KAIST, *Mar. 2013 – Aug. 2020*

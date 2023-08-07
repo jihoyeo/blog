@@ -7,6 +7,9 @@ search_exclude: true
 
 ## REFEREED JOURNAL PUBLICATIONS
 
+
+- **Yeo, J.**, Lee, S., Jang, K., & Lee, J. (2023). ["Real-Time Operations of Autonomous Mobility-on-Demand Services with Inter-and Intra-Zonal Relocation"](https://ieeexplore.ieee.org/abstract/document/10197213) IEEE Transactions on Intelligent Vehicles.
+- Kim, S., Jang, K., & **Yeo, J.** (2023). ["Non-linear impacts of COVID-19 pandemic on human mobility: Lessons from its variations across three pandemic waves"](https://www.sciencedirect.com/science/article/pii/S2210670723003803) Sustainable Cities and Society, 97, 104769. (**Corresponding**)
 - Yeon, H., Eom, T., Jang, K., & **Yeo, J.** (2023). ["DTUMOS, digital twin for large-scale urban mobility operating system"](https://www.nature.com/articles/s41598-023-32326-9). Scientific Reports, 13(1), 1-11. (**Corresponding**)
 - Shim, J., & **Yeo, J.** (2022). ["An Evaluation Method of Road Link Functionality Using Individual Trajectory Data and Weighted Network Analysis"](https://www.hindawi.com/journals/jat/2022/4960882/).  Journal of Advanced Transportation, vol. 2022, Article ID 4960882, 10 pages, 2022. (**Corresponding**)
 - Kim, S., Lee, S., Ko, E., Jang, K., & **Yeo, J.** (2021). ["Changes in car and bus usage amid the COVID-19 pandemic: Relationship with land use and land price"](https://www.sciencedirect.com/science/article/pii/S0966692321002210?casa_token=83JpLaDeJJ0AAAAA:Mm6Dud5kv-FWXFig4N_mbZdXvcpQeCq95tYHaavyvm_F_hgxOlUh2InRe9u_FtHkp9rEcuyHm9HL) Journal of Transport Geography, 96, 103168. (**Corresponding**)
