@@ -1,40 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://jihoyeo.github.io/blog/markdown/2020/01/14/test-markdown-post.html</loc>
-<lastmod>2020-01-14T00:00:00-06:00</lastmod>
-</url>
-<url>
-<loc>https://jihoyeo.github.io/blog/jupyter/2020/02/20/test.html</loc>
-<lastmod>2020-02-20T00:00:00-06:00</lastmod>
-</url>
-<url>
-<loc>https://jihoyeo.github.io/blog/about/</loc>
-</url>
-<url>
-<loc>https://jihoyeo.github.io/blog/research/</loc>
-</url>
-<url>
-<loc>https://jihoyeo.github.io/blog/publication/</loc>
-</url>
-<url>
-<loc>https://jihoyeo.github.io/blog/lectures/</loc>
-</url>
-<url>
-<loc>https://jihoyeo.github.io/blog/categories/</loc>
-</url>
-<url>
-<loc>https://jihoyeo.github.io/blog/search/</loc>
-</url>
-<url>
-<loc>https://jihoyeo.github.io/blog/</loc>
-</url>
-<url>
-<loc>https://jihoyeo.github.io/blog/google325748bea3c5eefe.html</loc>
-<lastmod>2023-08-07T03:25:56-05:00</lastmod>
-</url>
-<url>
-<loc>https://jihoyeo.github.io/blog/images/Curriculum%20Vitae_JihoYeo.pdf</loc>
-<lastmod>2023-08-07T03:25:56-05:00</lastmod>
-</url>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <url>
+        <loc>https://jihoyeo.github.io/jupyter/2020/02/20/test.html</loc>
+        
+        <lastmod>2020-02-20T00:00:00-06:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>https://jihoyeo.github.io/markdown/2020/01/14/test-markdown-post.html</loc>
+        
+        <lastmod>2020-01-14T00:00:00-06:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
 </urlset>

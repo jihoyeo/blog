@@ -67,15 +67,4 @@
   
   
 
-  
-      ,"page14": {
-          "title": "",
-          "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
-          "url": "https://jihoyeo.github.io/blog/robots.txt",
-          "relUrl": "/robots.txt",
-          "date": ""
-      }
-      
-  
-
 }
